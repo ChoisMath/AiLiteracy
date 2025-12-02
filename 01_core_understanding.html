@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chois AI Literacy: Core Understanding</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom gradient for the title letter */
+        .title-circle {
+            background: linear-gradient(135deg, #4F46E5, #3B82F6);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Accordion icon transition */
+        .accordion-button svg {
+            transition: transform 0.2s ease-in-out;
+        }
+        .accordion-button[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Language Switcher -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-indigo-600">Chois</span>
+                <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI Literacy</span>
+            </div>
+            
+            <!-- Language Buttons -->
+            <div class="flex space-x-2">
+                <button id="lang-en" onclick="changeLanguage('en')" class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_en">English</button>
+                <button id="lang-zh" onclick="changeLanguage('zh')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_zh">中文</button>
+                <button id="lang-ko" onclick="changeLanguage('ko')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_ko">한국어</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Section Title -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900" data-lang-key="title">01. Core Understanding</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="subtitle">
+                Foundational AI concepts, terminology, and how different AI systems work.
+            </p>
+        </section>
+
+        <!-- 1. What is AI? -->
+        <section class="bg-white shadow-lg rounded-2xl overflow-hidden mb-12">
+            <div class="md:flex">
+                <!-- Visual Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/e0f2fe/0c4a6e?text=What+is+AI%3F" alt="Abstract representation of Artificial Intelligence" class="w-full h-64 md:h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div class="md:w-1/2 p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-indigo-700 mb-4" data-lang-key="s1_title">What is Artificial Intelligence?</h2>
+                    <p class="text-gray-700 mb-4" data-lang-key="s1_p1">
+                        Artificial Intelligence (AI) is a broad field of computer science focused on creating systems that can simulate human intelligence to perform tasks. These tasks can include learning, reasoning, problem-solving, perception, and language understanding.
+                    </p>
+                    <p class="text-gray-700 mb-4" data-lang-key="s1_p2">
+                        Think of it as teaching a machine to &quot;think&quot; or &quot;act&quot; like a human, but not in the way you see in movies. Instead, it's about processing information and recognizing patterns to make a decision or create something new.
+                    </p>
+                    <p class="text-gray-700" data-lang-key="s1_p3">
+                        It's also important to distinguish AI from simple automation. Automation follows pre-programmed <em>rules</em> (if X happens, do Y). AI, specifically Machine Learning, makes <em>predictions</em> and <em>decisions</em> based on <em>patterns</em> it has learned from data, allowing it to handle new and unseen situations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Key Terminology (Accordion) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="s2_title">Key Terminology</h2>
+            <div class="space-y-4 max-w-3xl mx-auto">
+                
+                <!-- Accordion Item 1: Machine Learning -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-1">
+                            <span data-lang-key="s2_term1_title">Machine Learning (ML)</span>
+                            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-1" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s2_term1_desc">
+                            This is the most common type of AI. Instead of being explicitly programmed with rules, a machine &quot;learns&quot; directly from large amounts of data. It identifies patterns in the data to make predictions or decisions.
+                            <br><br><strong>Example:</strong> An email spam filter learns to identify junk mail based on thousands of examples of spam and non-spam emails.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2: Deep Learning -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-2">
+                            <span data-lang-key="s2_term2_title">Deep Learning (DL)</span>
+                            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-2" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s2_term2_desc">
+                            A more advanced subfield of Machine Learning. Deep Learning uses &quot;neural networks&quot; with many layers (hence &quot;deep&quot;) to solve complex problems. It's inspired by the structure of the human brain.
+                            <br><br><strong>Example:</strong> Self-driving cars use Deep Learning to identify pedestrians, traffic lights, and other cars from camera data.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3: Neural Networks -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-3">
+                            <span data-lang-key="s2_term3_title">Neural Networks (NN)</span>
+                            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-3" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s2_term3_desc">
+                            The core component of Deep Learning. A Neural Network is a system of interconnected &quot;nodes&quot; or &quot;neurons&quot; in layers. Data passes through these layers, which process and transform it to find patterns and make a final decision.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 4: Large Language Models -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-4">
+                            <span data-lang-key="s2_term4_title">Large Language Models (LLMs)</span>
+                            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-4" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s2_term4_desc">
+                            These are a type of AI, built using Deep Learning and massive amounts of text data (like the entire internet). They are trained to understand and generate human-like text.
+                            <br><br><strong>Example:</strong> Chatbots like Gemini or ChatGPT, which can answer questions, write stories, and translate languages.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 5: Generative AI -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-5">
+                            <span data-lang-key="s2_term5_title">Generative AI (GenAI)</span>
+                            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-5" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s2_term5_desc">
+                            A category of AI that can <em>create</em> new content, not just analyze existing data. This includes text, images, music, and code. LLMs are a type of Generative AI.
+                            <br><br><strong>Example:</strong> AI art generators (like DALL-E or Midjourney) that create detailed images from a simple text prompt.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 6: NLP -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-6">
+                            <span data-lang-key="s2_term6_title">Natural Language Processing (NLP)</span>
+                            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-6" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s2_term6_desc">
+                            The field of AI focused on giving computers the ability to understand, interpret, and generate human <em>text</em>. It's how machines process and analyze language.
+                            <br><br><strong>Example:</strong> Google Translate, email spam filters, grammar-checking tools, and sentiment analysis (determining if a review is positive or negative).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 7: Computer Vision -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-7">
+                            <span data-lang-key="s2_term7_title">Computer Vision (CV)</span>
+                            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-7" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s2_term7_desc">
+                            The field of AI that trains computers to &quot;see&quot; and interpret the visual world. Models are trained on images and videos to identify and understand objects, people, and scenes.
+                            <br><br><strong>Example:</strong> Unlocking your phone with your face, self-driving cars &quot;seeing&quot; the road, and systems that tag your friends in photos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. How AI Learns -->
+        <section class="bg-white shadow-lg rounded-2xl overflow-hidden mb-12">
+            <div class="md:flex md:flex-row-reverse">
+                <!-- Visual Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/eef2ff/4338ca?text=How+AI+Learns" alt="Diagram showing data, algorithm, and model" class="w-full h-64 md:h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div class="md:w-1/2 p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-indigo-700 mb-4" data-lang-key="s3_title">How AI &quot;Learns&quot;</h2>
+                    <p class="text-gray-700 mb-6" data-lang-key="s3_p1">
+                        AI, especially Machine Learning, learns through a process called &quot;training.&quot; It's like a student studying for a test, but with millions of flashcards.
+                    </p>
+                    <ol class="list-decimal list-inside space-y-4">
+                        <li class="text-gray-700">
+                            <strong class="font-semibold" data-lang-key="s3_step1_title">1. Data Collection:</strong> 
+                            <span data-lang-key="s3_step1_desc">Developers gather massive amounts of data. To teach an AI to recognize cats, you need thousands of pictures labeled &quot;cat&quot; and &quot;not cat.&quot;</span>
+                        </li>
+                        <li class="text-gray-700">
+                            <strong class="font-semibold" data-lang-key="s3_step2_title">2. Training:</strong> 
+                            <span data-lang-key="s3_step2_desc">The data is fed into an algorithm (the &quot;model&quot;). The model tries to find patterns and make a guess (e.g., &quot;This is a cat&quot;).</span>
+                        </li>
+                        <li class="text-gray-700">
+                            <strong class="font-semibold" data-lang-key="s3_step3_title">3. Feedback:</strong> 
+                            <span data-lang-key="s3_step3_desc">It's told if its guess is right or wrong. If wrong, it adjusts its internal settings (called &quot;weights&quot;) slightly. This process is repeated millions of times.</span>
+                        </li>
+                        <li class="text-gray-700">
+                            <strong class="font-semibold" data-lang-key="s3_step4_title">4. Deployment:</strong> 
+                            <span data-lang-key="s3_step4_desc">Once the model is accurate enough, it can be used on new, unseen data to make predictions.</span>
+                        </li>
+                    </ol>
+                    <p class="text-gray-700 mt-6 p-4 bg-gray-100 rounded-lg" data-lang-key="s3_p2">
+                        <strong class="text-gray-800">Key Concept: The &quot;Black Box&quot; Problem</strong><br>
+                        In many complex AI systems, like Deep Learning, the internal decision-making process is so complicated that even its creators don't know <em>exactly</em> why it made a specific choice. They know the model is statistically accurate, but not <em>how</em> it thinks. This is a core challenge in AI.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Types of AI by Capability -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="s4_title">Types of AI by Capability</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Narrow AI -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4" data-lang-key="s4_narrow_title">Artificial Narrow Intelligence (ANI)</h3>
+                    <p class="text-gray-700 mb-4" data-lang-key="s4_narrow_desc">
+                        This is the <em>only</em> type of AI we have today. ANI is designed and trained to perform one specific, narrow task. It may seem super-intelligent at that one task, but it has no awareness, consciousness, or ability to operate outside its programming.
+                    </p>
+                    <strong class="font-semibold" data-lang-key="s4_examples_title">Examples:</strong>
+                    <ul class="list-disc list-inside mt-2 text-gray-700">
+                        <li data-lang-key="s4_narrow_ex1">Siri/Alexa/Google Assistant</li>
+                        <li data-lang-key="s4_narrow_ex2">Facial recognition unlocking your phone</li>
+                        <li data-lang-key="s4_narrow_ex3">Netflix or YouTube recommendations</li>
+                        <li data-lang-key="s4_narrow_ex4">Generative AI chatbots</li>
+                    </ul>
+                </div>
+
+                <!-- General AI -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-indigo-500">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-4" data-lang-key="s4_general_title">Artificial General Intelligence (AGI)</h3>
+                    <p class="text-gray-700 mb-4" data-lang-key="s4_general_desc">
+                        This is the hypothetical, science-fiction version of AI. AGI would possess the ability to understand, learn, and apply its intelligence to solve <em>any</em> problem, much like a human being. It would have consciousness and self-awareness.
+                        <br><br>
+                        <strong class="text-gray-800">AGI does not currently exist,</strong> and it is a topic of intense debate among scientists whether it is even possible.
+                    </p>
+                </div>
+
+                <!-- Super AI -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border-t-4 border-purple-400">
+                    <h3 class="text-2xl font-bold text-purple-300 mb-4" data-lang-key="s4_super_title">Artificial Superintelligence (ASI)</h3>
+                    <p class="text-gray-300 mb-4" data-lang-key="s4_super_desc">
+                        A theoretical future AI that would not just mimic human intelligence, but would surpass it in every aspect—from creative capability and problem-solving to social skills. This remains firmly in the realm of science fiction and philosophical discussion.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. AI in Your Daily Life -->
+        <section class="bg-white shadow-lg rounded-2xl p-6 md:p-10 mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="s5_title">AI in Your Daily Life</h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto" data-lang-key="s5_subtitle">
+                AI isn't just one thing; it's a set of different technologies. Here’s how you interact with them, often without realizing it.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. NLP -->
+                <div class="text-center p-4">
+                    <div class="flex justify-center items-center mb-4">
+                        <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                            <!-- chat icon -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s5_ex1_title">Natural Language Processing (NLP)</h3>
+                    <p class="text-gray-600" data-lang-key="s5_ex1_desc">
+                        Used for understanding and processing <em>text</em>.<br><strong>Examples:</strong> Email spam filters, grammar checkers, and language translation.
+                    </p>
+                </div>
+
+                <!-- 2. Speech & Audio -->
+                <div class="text-center p-4">
+                    <div class="flex justify-center items-center mb-4">
+                        <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center">
+                            <!-- mic icon -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s5_ex2_title">Speech &amp; Audio Recognition</h3>
+                    <p class="text-gray-600" data-lang-key="s5_ex2_desc">
+                        Used for understanding <em>spoken</em> language.<br><strong>Examples:</strong> Voice assistants (Siri, Alexa), voice-to-text dictation, and customer service phone bots.
+                    </p>
+                </div>
+
+                <!-- 3. Computer Vision -->
+                <div class="text-center p-4">
+                    <div class="flex justify-center items-center mb-4">
+                        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                            <!-- eye icon -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s5_ex3_title">Computer Vision (CV)</h3>
+                    <p class="text-gray-600" data-lang-key="s5_ex3_desc">
+                        Allows AI to &quot;see&quot; and interpret visual info.<br><strong>Examples:</strong> Facial recognition, tagging people in photos, and interpreting medical scans (X-rays, MRIs).
+                    </p>
+                </div>
+
+                <!-- 4. Recommendation Engines -->
+                <div class="text-center p-4">
+                    <div class="flex justify-center items-center mb-4">
+                        <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                            <!-- thumb up icon -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-7.017A2 2 0 016.25 19v-7a2 2 0 012-2h2V3a2 2 0 012-2h3a2 2 0 012 2v7z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s5_ex4_title">Recommendation Engines</h3>
+                    <p class="text-gray-600" data-lang-key="s5_ex4_desc">
+                        A type of <em>predictive AI</em> that forecasts your preferences.<br><strong>Examples:</strong> Netflix suggesting what to watch, Amazon's &quot;Customers also bought&quot;.
+                    </p>
+                </div>
+                
+                <!-- 5. Generative AI -->
+                <div class="text-center p-4">
+                    <div class="flex justify-center items-center mb-4">
+                        <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                            <!-- sparkles icon -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s5_ex5_title">Generative AI (GenAI)</h3>
+                    <p class="text-gray-600" data-lang-key="s5_ex5_desc">
+                        Creates new, original content.<br><strong>Examples:</strong> LLMs (like Gemini/ChatGPT) writing text, and AI art generators (DALL-E) creating images.
+                    </p>
+                </div>
+
+                <!-- 6. Robotics -->
+                <div class="text-center p-4">
+                    <div class="flex justify-center items-center mb-4">
+                        <div class="w-16 h-16 bg-gray-200 text-gray-700 rounded-full flex items-center justify-center">
+                            <!-- cog icon -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s5_ex6_title">Robotics</h3>
+                    <p class="text-gray-600" data-lang-key="s5_ex6_desc">
+                        Combines AI (like CV and predictive models) with physical hardware.<br><strong>Examples:</strong> Advanced manufacturing, warehouse automation, and robot vacuums.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chois AI 윤리 및 문해력 교육</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            'en': {
+                'nav_title': 'AI Literacy',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '01. Core Understanding',
+                'subtitle': 'Foundational AI concepts, terminology, and how different AI systems work.',
+                's1_title': 'What is Artificial Intelligence?',
+                's1_p1': 'Artificial Intelligence (AI) is a broad field of computer science focused on creating systems that can simulate human intelligence to perform tasks. These tasks can include learning, reasoning, problem-solving, perception, and language understanding.',
+                's1_p2': 'Think of it as teaching a machine to &quot;think&quot; or &quot;act&quot; like a human, but not in the way you see in movies. Instead, it\'s about processing information and recognizing patterns to make a decision or create something new.',
+                's1_p3': 'It\'s also important to distinguish AI from simple automation. Automation follows pre-programmed *rules* (if X happens, do Y). AI, specifically Machine Learning, makes *predictions* and *decisions* based on *patterns* it has learned from data, allowing it to handle new and unseen situations.',
+                's2_title': 'Key Terminology',
+                's2_term1_title': 'Machine Learning (ML)',
+                's2_term1_desc': 'This is the most common type of AI. Instead of being explicitly programmed with rules, a machine &quot;learns&quot; directly from large amounts of data. It identifies patterns in the data to make predictions or decisions.<br><br><strong>Example:</strong> An email spam filter learns to identify junk mail based on thousands of examples of spam and non-spam emails.',
+                's2_term2_title': 'Deep Learning (DL)',
+                's2_term2_desc': 'A more advanced subfield of Machine Learning. Deep Learning uses &quot;neural networks&quot; with many layers (hence &quot;deep&quot;) to solve complex problems. It\'s inspired by the structure of the human brain.<br><br><strong>Example:</strong> Self-driving cars use Deep Learning to identify pedestrians, traffic lights, and other cars from camera data.',
+                's2_term3_title': 'Neural Networks (NN)',
+                's2_term3_desc': 'The core component of Deep Learning. A Neural Network is a system of interconnected &quot;nodes&quot; or &quot;neurons&quot; in layers. Data passes through these layers, which process and transform it to find patterns and make a final decision.',
+                's2_term4_title': 'Large Language Models (LLMs)',
+                's2_term4_desc': 'These are a type of AI, built using Deep Learning and massive amounts of text data (like the entire internet). They are trained to understand and generate human-like text.<br><br><strong>Example:</strong> Chatbots like Gemini or ChatGPT, which can answer questions, write stories, and translate languages.',
+                's2_term5_title': 'Generative AI (GenAI)',
+                's2_term5_desc': 'A category of AI that can *create* new content, not just analyze existing data. This includes text, images, music, and code. LLMs are a type of Generative AI.<br><br><strong>Example:</strong> AI art generators (like DALL-E or Midjourney) that create detailed images from a simple text prompt.',
+                's2_term6_title': 'Natural Language Processing (NLP)',
+                's2_term6_desc': 'The field of AI focused on giving computers the ability to understand, interpret, and generate human *text*. It\'s how machines process and analyze language.<br><br><strong>Example:</strong> Google Translate, email spam filters, grammar-checking tools, and sentiment analysis (determining if a review is positive or negative).',
+                's2_term7_title': 'Computer Vision (CV)',
+                's2_term7_desc': 'The field of AI that trains computers to &quot;see&quot; and interpret the visual world. Models are trained on images and videos to identify and understand objects, people, and scenes.<br><br><strong>Example:</strong> Unlocking your phone with your face, self-driving cars &quot;seeing&quot; the road, and systems that tag your friends in photos.',
+                's3_title': 'How AI &quot;Learns&quot;',
+                's3_p1': 'AI, especially Machine Learning, learns through a process called &quot;training.&quot; It\'s like a student studying for a test, but with millions of flashcards.',
+                's3_step1_title': '1. Data Collection:',
+                's3_step1_desc': 'Developers gather massive amounts of data. To teach an AI to recognize cats, you need thousands of pictures labeled &quot;cat&quot; and &quot;not cat.&quot;',
+                's3_step2_title': '2. Training:',
+                's3_step2_desc': 'The data is fed into an algorithm (the &quot;model&quot;). The model tries to find patterns and make a guess (e.g., &quot;This is a cat&quot;).',
+                's3_step3_title': '3. Feedback:',
+                's3_step3_desc': 'It\'s told if its guess is right or wrong. If wrong, it adjusts its internal settings (called &quot;weights&quot;) slightly. This process is repeated millions of times.',
+                's3_step4_title': '4. Deployment:',
+                's3_step4_desc': 'Once the model is accurate enough, it can be used on new, unseen data to make predictions.',
+                's3_p2': '<strong class="text-gray-800">Key Concept: The &quot;Black Box&quot; Problem</strong><br>In many complex AI systems, like Deep Learning, the internal decision-making process is so complicated that even its creators don\'t know *exactly* why it made a specific choice. They know the model is statistically accurate, but not *how* it thinks. This is a core challenge in AI.',
+                's4_title': 'Types of AI by Capability',
+                's4_narrow_title': 'Artificial Narrow Intelligence (ANI)',
+                's4_narrow_desc': 'This is the *only* type of AI we have today. ANI is designed and trained to perform one specific, narrow task. It may seem super-intelligent at that one task, but it has no awareness, consciousness, or ability to operate outside its programming.',
+                's4_examples_title': 'Examples:',
+                's4_narrow_ex1': 'Siri/Alexa/Google Assistant',
+                's4_narrow_ex2': 'Facial recognition unlocking your phone',
+                's4_narrow_ex3': 'Netflix or YouTube recommendations',
+                's4_narrow_ex4': 'Generative AI chatbots',
+                's4_general_title': 'Artificial General Intelligence (AGI)',
+                's4_general_desc': 'This is the hypothetical, science-fiction version of AI. AGI would possess the ability to understand, learn, and apply its intelligence to solve *any* problem, much like a human being. It would have consciousness and self-awareness.<br><br><strong class="text-gray-800">AGI does not currently exist,</strong> and it is a topic of intense debate among scientists whether it is even possible.',
+                's4_super_title': 'Artificial Superintelligence (ASI)',
+                's4_super_desc': 'A theoretical future AI that would not just mimic human intelligence, but would surpass it in every aspect—from creative capability and problem-solving to social skills. This remains firmly in the realm of science fiction and philosophical discussion.',
+                's5_title': 'AI in Your Daily Life',
+                's5_subtitle': 'AI isn\'t just one thing; it\'s a set of different technologies. Here’s how you interact with them, often without realizing it.',
+                's5_ex1_title': 'Natural Language Processing (NLP)',
+                's5_ex1_desc': 'Used for understanding and processing *text*. <br><strong>Examples:</strong> Email spam filters, grammar checkers, and language translation.',
+                's5_ex2_title': 'Speech &amp; Audio Recognition',
+                's5_ex2_desc': 'Used for understanding *spoken* language. <br><strong>Examples:</strong> Voice assistants (Siri, Alexa), voice-to-text dictation, and customer service phone bots.',
+                's5_ex3_title': 'Computer Vision (CV)',
+                's5_ex3_desc': 'Allows AI to &quot;see&quot; and interpret visual info. <br><strong>Examples:</strong> Facial recognition, tagging people in photos, and interpreting medical scans (X-rays, MRIs).',
+                's5_ex4_title': 'Recommendation Engines',
+                's5_ex4_desc': 'A type of *predictive AI* that forecasts your preferences. <br><strong>Examples:</strong> Netflix suggesting what to watch, Amazon\'s &quot;Customers also bought&quot;.',
+                's5_ex5_title': 'Generative AI (GenAI)',
+                's5_ex5_desc': 'Creates new, original content. <br><strong>Examples:</strong> LLMs (like Gemini/ChatGPT) writing text, and AI art generators (DALL-E) creating images.',
+                's5_ex6_title': 'Robotics',
+                's5_ex6_desc': 'Combines AI (like CV and predictive models) with physical hardware. <br><strong>Examples:</strong> Advanced manufacturing, warehouse automation, and robot vacuums.'
+            },
+            'zh': {
+                'nav_title': 'AI素养',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '01. 核心理解',
+                'subtitle': '人工智能的基本概念、术语以及不同人工智能系统的工作原理。',
+                's1_title': '什么是人工智能？',
+                's1_p1': '人工智能（AI）是计算机科学的一个广泛领域，专注于创建能够模拟人类智能来执行任务的系统。这些任务包括学习、推理、解决问题、感知和语言理解。',
+                's1_p2': '可以把它想象成教机器像人一样“思考”或“行动”，但不是你在电影中看到的那样。相反，它是关于处理信息和识别模式，以做出决定或创造新事物。',
+                's1_p3': '区分AI和简单自动化也很重要。自动化遵循预先编程的*规则*（如果发生X，则执行Y）。而AI，特别是机器学习，会根据从数据中学到的*模式*做出*预测*和*决策*，使其能够处理新的和未见过的情况。',
+                's2_title': '关键术语',
+                's2_term1_title': '机器学习 (ML)',
+                's2_term1_desc': '这是最常见的人工智能类型。机器不是通过明确编程规则来学习，而是直接从大量数据中“学习”。它识别数据中的模式来进行预测或决策。<br><br><strong>示例：</strong>电子邮件垃圾邮件过滤器通过学习成千上万的垃圾邮件和非垃圾邮件示例来识别垃圾邮件。',
+                's2_term2_title': '深度学习 (DL)',
+                's2_term2_desc': '机器学习的一个更高级的子领域。深度学习使用具有许多层（因此称为“深度”）的“神经网络”来解决复杂问题。它的灵感来自于人脑的结构。<br><br><strong>示例：</strong>自动驾驶汽车使用深度学习从摄像头数据中识别行人、交通信号灯和其他车辆。',
+                's2_term3_title': '神经网络 (NN)',
+                's2_term3_desc': '深度学习的核心组成部分。神经网络是一个由多层互连的“节点”或“神经元”组成的系统。数据通过这些层，这些层处理和转换数据以找到模式并做出最终决定。',
+                's2_term4_title': '大型语言模型 (LLM)',
+                's2_term4_desc': '这是一种人工智能，使用深度学习和海量文本数据（如整个互联网）构建。它们被训练来理解和生成类似人类的文本。<br><br><strong>示例：</strong>像Gemini或ChatGPT这样的聊天机器人，可以回答问题、写故事和翻译语言。',
+                's2_term5_title': '生成式人工智能 (GenAI)',
+                's2_term5_desc': '一类可以*创建*新内容的人工智能，而不仅仅是分析现有数据。这包括文本、图像、音乐和代码。大型语言模型是生成式人工智能的一种。<br><br><strong>示例：</strong>AI艺术生成器（如DALL-E或Midjourney），可以根据简单的文本提示创建详细的图像。',
+                's2_term6_title': '自然语言处理 (NLP)',
+                's2_term6_desc': '专注于让计算机有能力理解、解释和生成人类*文本*的人工智能领域。它是机器处理和分析语言的方式。<br><br><strong>示例：</strong> 谷歌翻译、电子邮件垃圾邮件过滤器、语法检查工具和情感分析（判断评论是正面还是负面）。',
+                's2_term7_title': '计算机视觉 (CV)',
+                's2_term7_desc': '训练计算机“看见”和解释视觉世界的人工智能领域。模型通过图像和视频进行训练，以识别和理解物体、人物和场景。<br><br><strong>示例：</strong> 用脸解锁手机、自动驾驶汽车“看见”道路，以及在照片中标记朋友的系统。',
+                's3_title': '人工智能如何“学习”',
+                's3_p1': '人工智能，特别是机器学习，通过一个称为“训练”的过程来学习。这就像一个学生为考试而学习，但使用的是数百万张抽认卡。',
+                's3_step1_title': '1. 数据收集：',
+                's3_step1_desc': '开发人员收集海量数据。要教AI识别猫，你需要数千张标记为“猫”和“非猫”的图片。',
+                's3_step2_title': '2. 训练：',
+                's3_step2_desc': '将数据输入算法（“模型”）。模型试图找到模式并进行猜测（例如，“这是一只猫”）。',
+                's3_step3_title': '3. 反馈：',
+                's3_step3_desc': '它被告知它的猜测是对还是错。如果错了，它会稍微调整其内部设置（称为“权重”）。这个过程会重复数百万次。',
+                's3_step4_title': '4. 部署：',
+                's3_step4_desc': '一旦模型足够准确，它就可以用于新的、未见过的数据上进行预测。',
+                's3_p2': '<strong class="text-gray-800">关键概念：“黑匣子”问题</strong><br>在许多复杂的人工智能系统（如深度学习）中，内部决策过程非常复杂，以至于即使是它的创造者也不知道它做出特定选择的*确切*原因。他们知道模型在统计上是准确的，但不知道它是*如何*思考的。这是人工智能的一个核心挑战。',
+                's4_title': '按能力划分的人工智能类型',
+                's4_narrow_title': '弱人工智能 (ANI)',
+                's4_narrow_desc': '这是我们今天拥有的*唯一*类型的人工智能。ANI被设计和训练来执行一个特定的、狭窄的任务。它在该任务上可能看起来超级智能，但它没有意识、自觉或能力在其编程之外运行。',
+                's4_examples_title': '示例：',
+                's4_narrow_ex1': 'Siri/Alexa/Google助手',
+                's4_narrow_ex2': '面部识别解锁手机',
+                's4_narrow_ex3': 'Netflix或YouTube的推荐',
+                's4_narrow_ex4': '生成式AI聊天机器人',
+                's4_general_title': '强人工智能 (AGI)',
+                's4_general_desc': '这是科幻小说中假设的人工智能版本。AGI将拥有理解、学习和应用其智能来解决*任何*问题的能力，就像人类一样。它将具有意识和自我意识。<br><br><strong class="text-gray-800">AGI目前不存在，</strong>科学家们就是否可能实现它存在激烈辩论。',
+                's4_super_title': '超人工智能 (ASI)',
+                's4_super_desc': '一种理论上的未来人工智能，它不仅能模仿人类智能，而且会在各个方面超越人类智能——从创造能力、解决问题到社交技能。这仍然坚定地停留在科幻小说和哲学讨论的领域。',
+                's5_title': '日常生活中的人工智能',
+                's5_subtitle': '人工智能不是单一的事物；它是一系列不同技术的集合。以下是您如何与它们互动的，通常是在没有意识到的情况下。',
+                's5_ex1_title': '自然语言处理 (NLP)',
+                's5_ex1_desc': '用于理解和处理*文本*。<br><strong>示例：</strong> 电子邮件垃圾邮件过滤器、语法检查器和语言翻译。',
+                's5_ex2_title': '语音和音频识别',
+                's5_ex2_desc': '用于理解*口头*语言。<br><strong>示例：</strong> 语音助手（Siri、Alexa）、语音转文本听写和客服电话机器人。',
+                's5_ex3_title': '计算机视觉 (CV)',
+                's5_ex3_desc': '允许AI“看见”并解释视觉信息。<br><strong>示例：</strong> 面部识别、在照片中标记人物以及解释医学扫描（X射线、MRI）。',
+                's5_ex4_title': '推荐引擎',
+                's5_ex4_desc': '一种预测您的偏好的*预测型AI*。<br><strong>示例：</strong> Netflix推荐观看内容、亚马逊的“顾客还购买了”。',
+                's5_ex5_title': '生成式人工智能 (GenAI)',
+                's5_ex5_desc': '创建新的原创内容。<br><strong>示例：</strong> LLM（如Gemini/ChatGPT）编写文本，以及AI艺术生成器（DALL-E）创建图像。',
+                's5_ex6_title': '机器人技术',
+                's5_ex6_desc': '将AI（如CV和预测模型）与物理硬件相结合。<br><strong>示例：</strong> 先进制造业、仓库自动化和扫地机器人。'
+            },
+            'ko': {
+                'nav_title': 'AI 리터러시',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '01. 핵심 이해',
+                'subtitle': 'AI의 기본 개념, 용어 및 다양한 AI 시스템의 작동 방식.',
+                's1_title': '인공지능(AI)이란 무엇인가?',
+                's1_p1': '인공지능(AI)은 작업을 수행하기 위해 인간의 지능을 시뮬레이션할 수 있는 시스템을 만드는 데 중점을 둔 컴퓨터 과학의 광범위한 분야입니다. 이러한 작업에는 학습, 추론, 문제 해결, 인식 및 언어 이해가 포함될 수 있습니다.',
+                's1_p2': '기계를 사람처럼 &quot;생각&quot;하거나 &quot;행동&quot;하도록 가르치는 것이라고 생각할 수 있지만, 영화에서 보는 방식과는 다릅니다. 대신, 정보를 처리하고 패턴을 인식하여 결정을 내리거나 새로운 것을 창조하는 것에 가깝습니다.',
+                's1_p3': 'AI와 단순 자동화를 구별하는 것도 중요합니다. 자동화는 미리 프로그래밍된 *규칙*을 따릅니다 (X가 발생하면 Y를 수행). 반면 AI, 특히 머신 러닝은 데이터에서 학습한 *패턴*을 기반으로 *예측*하고 *결정*을 내려, 새롭고 처음 보는 상황을 처리할 수 있습니다.',
+                's2_title': '주요 용어',
+                's2_term1_title': '머신 러닝 (ML)',
+                's2_term1_desc': '가장 일반적인 유형의 AI입니다. 기계는 명시적인 규칙으로 프로그래밍되는 대신 방대한 양의 데이터로부터 직접 &quot;학습&quot;합니다. 데이터의 패턴을 식별하여 예측하거나 결정을 내립니다.<br><br><strong>예:</strong> 이메일 스팸 필터는 수천 개의 스팸 및 정상 메일 예제를 기반으로 정크 메일을 식별하는 방법을 학습합니다.',
+                's2_term2_title': '딥 러닝 (DL)',
+                's2_term2_desc': '머신 러닝의 더 발전된 하위 분야입니다. 딥 러닝은 여러 계층(그래서 &quot;딥&quot;)을 가진 &quot;신경망&quot;을 사용하여 복잡한 문제를 해결합니다. 이는 인간 뇌의 구조에서 영감을 받았습니다.<br><br><strong>예:</strong> 자율 주행 자동차는 딥 러닝을 사용하여 카메라 데이터에서 보행자, 신호등 및 기타 차량을 식별합니다.',
+                's2_term3_title': '신경망 (NN)',
+                's2_term3_desc': '딥 러닝의 핵심 구성 요소입니다. 신경망은 계층으로 상호 연결된 &quot;노드&quot; 또는 &quot;뉴런&quot;의 시스템입니다. 데이터는 이러한 계층을 통과하며, 이 계층은 데이터를 처리하고 변환하여 패턴을 찾고 최종 결정을 내립니다.',
+                's2_term4_title': '거대 언어 모델 (LLM)',
+                's2_term4_desc': '딥 러닝과 방대한 양의 텍스트 데이터(인터넷 전체와 같은)를 사용하여 구축된 AI의 한 유형입니다. 인간과 유사한 텍스트를 이해하고 생성하도록 훈련되었습니다.<br><br><strong>예:</strong> 질문에 답하고, 이야기를 쓰고, 언어를 번역할 수 있는 Gemini 또는 ChatGPT와 같은 챗봇.',
+                's2_term5_title': '생성형 AI (GenAI)',
+                's2_term5_desc': '기존 데이터를 분석하는 것뿐만 아니라 새로운 콘텐츠를 *창조*할 수 있는 AI 범주입니다. 여기에는 텍스트, 이미지, 음악 및 코드가 포함됩니다. LLM은 생성형 AI의 한 유형입니다.<br><br><strong>예:</strong> 간단한 텍스트 프롬프트에서 상세한 이미지를 생성하는 AI 아트 생성기(예: DALL-E 또는 Midjourney).',
+                's2_term6_title': '자연어 처리 (NLP)',
+                's2_term6_desc': '컴퓨터가 인간의 *텍스트*를 이해하고, 해석하며, 생성할 수 있는 능력을 부여하는 데 중점을 둔 AI 분야입니다. 기계가 언어를 처리하고 분석하는 방식입니다.<br><br><strong>예:</strong> 구글 번역, 이메일 스팸 필터, 문법 검사 도구, 감성 분석(리뷰가 긍정적인지 부정적인지 판단).',
+                's2_term7_title': '컴퓨터 비전 (CV)',
+                's2_term7_desc': '컴퓨터가 시각 세계를 &quot;보고&quot; 해석하도록 훈련하는 AI 분야입니다. 모델은 이미지와 비디오로 훈련되어 물체, 사람, 장면을 식별하고 이해합니다.<br><br><strong>예:</strong> 얼굴로 휴대폰 잠금 해제, 자율 주행 자동차가 도로 &quot;보기&quot;, 사진에서 친구 태그하기.',
+                's3_title': 'AI는 어떻게 &quot;학습&quot;하는가?',
+                's3_p1': 'AI, 특히 머신 러닝은 &quot;훈련&quot;이라는 과정을 통해 학습합니다. 이는 학생이 시험공부를 하는 것과 비슷하지만, 수백만 개의 플래시카드를 사용하는 것과 같습니다.',
+                's3_step1_title': '1. 데이터 수집:',
+                's3_step1_desc': '개발자들은 방대한 양의 데이터를 수집합니다. AI에게 고양이를 인식하도록 가르치려면 &quot;고양이&quot;와 &quot;고양이 아님&quot;으로 레이블이 지정된 수천 장의 사진이 필요합니다.',
+                's3_step2_title': '2. 훈련:',
+                's3_step2_desc': '데이터가 알고리즘(&quot;모델&quot;)에 입력됩니다. 모델은 패턴을 찾고 추측을 하려고 시도합니다(예: &quot;이것은 고양이다&quot;).',
+                's3_step3_title': '3. 피드백:',
+                's3_step3_desc': '추측이 맞았는지 틀렸는지 피드백을 받습니다. 틀렸다면, 내부 설정( &quot;가중치&quot;)을 약간 조정합니다. 이 과정이 수백만 번 반복됩니다.',
+                's3_step4_title': '4. 배포:',
+                's3_step4_desc': '모델이 충분히 정확해지면, 새로운, 처음 보는 데이터에 사용하여 예측을 할 수 있습니다.',
+                's3_p2': '<strong class="text-gray-800">핵심 개념: &quot;블랙박스&quot; 문제</strong><br>딥 러닝과 같은 많은 복잡한 AI 시스템에서는 내부 의사 결정 과정이 너무 복잡해서 제작자조차도 왜 특정 선택을 했는지 *정확히* 알지 못합니다. 모델이 통계적으로 정확하다는 것은 알지만, *어떻게* 생각하는지는 모릅니다. 이것이 AI의 핵심 과제입니다.',
+                's4_title': '능력별 AI 유형',
+                's4_narrow_title': '약인공지능 (ANI)',
+                's4_narrow_desc': '이것은 오늘날 우리가 가진 *유일한* 유형의 AI입니다. ANI는 하나의 특정하고 좁은 작업을 수행하도록 설계되고 훈련되었습니다. 그 하나의 작업에서는 초지능적으로 보일 수 있지만, 프로그래밍된 범위를 벗어난 인식, 의식 또는 작동 능력이 없습니다.',
+                's4_examples_title': '예:',
+                's4_narrow_ex1': 'Siri/Alexa/Google 어시스턴트',
+                's4_narrow_ex2': '휴대폰의 얼굴 인식 잠금 해제',
+                's4_narrow_ex3': 'Netflix 또는 YouTube 추천',
+                's4_narrow_ex4': '생성형 AI 챗봇',
+                's4_general_title': '강인공지능 (AGI)',
+                's4_general_desc': '이것은 공상 과학 소설에 나오는 가상의 AI 버전입니다. AGI는 마치 인간처럼 *모든* 문제를 이해하고, 배우고, 지능을 적용하여 해결할 수 있는 능력을 가질 것입니다. 의식과 자아 인식을 가질 것입니다.<br><br><strong class="text-gray-800">AGI는 현재 존재하지 않으며,</strong> 그것이 가능한지에 대해 과학자들 사이에서 격렬한 논쟁의 주제입니다.',
+                's4_super_title': '초인공지능 (ASI)',
+                's4_super_desc': '이론적인 미래의 AI로, 인간의 지능을 모방하는 것을 넘어 창의적 능력, 문제 해결, 사회적 기술에 이르기까지 모든 면에서 인간을 능가할 것입니다. 이것은 확고히 공상 과학 및 철학적 토론의 영역에 남아 있습니다.',
+                's5_title': '일상 생활 속의 AI',
+                's5_subtitle': 'AI는 단지 한 가지가 아닙니다. 그것은 다양한 기술의 집합입니다. 다음은 여러분이 종종 깨닫지 못한 채 AI와 상호 작용하는 방식입니다.',
+                's5_ex1_title': '자연어 처리 (NLP)',
+                's5_ex1_desc': '*텍스트*를 이해하고 처리하는 데 사용됩니다. <br><strong>예:</strong> 이메일 스팸 필터, 문법 검사기, 언어 번역.',
+                's5_ex2_title': '음성 및 오디오 인식',
+                's5_ex2_desc': '*음성* 언어를 이해하는 데 사용됩니다. <br><strong>예:</strong> 음성 비서(Siri, Alexa), 음성-텍스트 받아쓰기, 고객 서비스 전화 봇.',
+                's5_ex3_title': '컴퓨터 비전 (CV)',
+                's5_ex3_desc': 'AI가 시각 정보를 &quot;보고&quot; 해석할 수 있게 합니다. <br><strong>예:</strong> 얼굴 인식, 사진 속 인물 태그하기, 의료 영상(X-ray, MRI) 해석.',
+                's5_ex4_title': '추천 엔진',
+                's5_ex4_desc': '사용자의 선호도를 예측하는 *예측형 AI*의 한 유형입니다. <br><strong>예:</strong> Netflix의 시청 콘텐츠 추천, Amazon의 &quot;고객이 함께 구매한 상품&quot;.',
+                's5_ex5_title': '생성형 AI (GenAI)',
+                's5_ex5_desc': '새롭고 독창적인 콘텐츠를 생성합니다. <br><strong>예:</strong> LLM(Gemini/ChatGPT 등)의 텍스트 작성, AI 아트 생성기(DALL-E)의 이미지 생성.',
+                's5_ex6_title': '로보틱스',
+                's5_ex6_desc': 'AI(CV 및 예측 모델 등)를 물리적 하드웨어와 결합합니다. <br><strong>예:</strong> 첨단 제조, 창고 자동화, 로봇 청소기.'
+            }
+        };
+
+        // --- Language Switcher Logic ---
+        function changeLanguage(lang) {
+            if (!translations[lang]) return;
+
+            // Update all text elements
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update <html> lang attribute
+            document.documentElement.lang = lang;
+
+            // Update button styles
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.id === `lang-${lang}`) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+
+        // --- Accordion Logic ---
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-accordion-target');
+                const targetBody = document.querySelector(targetId);
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                targetBody.classList.toggle('hidden');
+                button.setAttribute('aria-expanded', !isExpanded);
+            });
+        });
+
+        // 기본 언어는 HTML에 들어있는 영어(en)이므로 초기 호출은 생략
+        // 필요하면 아래 줄 주석 해제
+        // changeLanguage('en');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if using npm in future)
+node_modules/
+package-lock.json
+
+# Python cache (from http.server)
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+npm-debug.log*
+
+# Screenshots and temporary files
+screenshot*.png
+temp*.txt
+
+# Build outputs (if any)
+dist/
+build/

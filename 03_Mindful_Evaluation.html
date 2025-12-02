@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chois AI Literacy: Mindful Evaluation & Meta-Learning</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom gradient for the title letter */
+        .title-circle {
+            background: linear-gradient(135deg, #10B981, #3B82F6);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Accordion icon transition */
+        .accordion-button svg.rotate-icon {
+            transition: transform 0.2s ease-in-out;
+        }
+        .accordion-button[aria-expanded="true"] svg.rotate-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Language Switcher -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-indigo-600">Chois</span>
+                <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI Literacy</span>
+            </div>
+            
+            <!-- Language Buttons -->
+            <div class="flex space-x-2">
+                <button id="lang-en" onclick="changeLanguage('en')" class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_en">English</button>
+                <button id="lang-zh" onclick="changeLanguage('zh')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_zh">中文</button>
+                <button id="lang-ko" onclick="changeLanguage('ko')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_ko">한국어</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Section Title -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900" data-lang-key="title">03. Mindful Evaluation &amp; Meta-Learning</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="subtitle">
+                Critical thinking about AI outputs and reflecting on how AI shapes our learning.
+            </p>
+        </section>
+
+        <!-- 1. Don't Trust, Verify -->
+        <section class="bg-white shadow-lg rounded-2xl overflow-hidden mb-16">
+            <div class="md:flex">
+                <!-- Visual Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/e0f2fe/0ea5e9?text=Don't+Trust,+Verify" alt="Illustration of a person fact-checking an AI" class="w-full h-64 md:h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div class="md:w-1/2 p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-cyan-600 mb-4" data-lang-key="s1_title">Don't Trust, Verify: The First Rule of AI</h2>
+                    <p class="text-gray-700 mb-4" data-lang-key="s1_p1">
+                        An AI is not an oracle. It doesn't "know" things; it <em>predicts</em> the next most plausible word in a sentence. This means it is a powerful <strong>"plausible text generator,"</strong> not a <strong>"truth generator."</strong>
+                    </p>
+                    <p class="text-gray-700" data-lang-key="s1_p2">
+                        This makes <strong>you</strong> the most important part of the process. You are the human-in-the-loop, the editor, and the final judge. Never accept an AI's output as fact without first evaluating it.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2. Common AI Pitfalls to Spot -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s2_title">Common AI Pitfalls to Spot</h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto" data-lang-key="s2_subtitle">
+                AI models can make mistakes. Your job is to be the critical editor. Here's what to look for.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Hallucinations -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item1_title">Hallucinations</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item1_desc">
+                        This is when an AI confidently states a falsehood as if it were fact. It literally "makes things up" that sound plausible, like inventing a non-existent book, a fake historical event, or a made-up legal precedent.
+                    </p>
+                </div>
+
+                <!-- Bias -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item2_title">Bias</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item2_desc">
+                        AI models are trained on vast amounts of human-generated text from the internet, which contains historical and societal biases. The AI can learn and reproduce these biases, such as associating certain jobs with specific genders or ethnicities.
+                    </p>
+                </div>
+
+                <!-- Misinformation -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item3_title">Misinformation</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item3_desc">
+                        Slightly different from hallucinations, this is when the AI confidently provides a factual error. For example, stating "The capital of Australia is Sydney" (it's Canberra). The information exists, but the AI gets it wrong.
+                    </p>
+                </div>
+                
+                <!-- Outdated Information -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item4_title">Outdated Information</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item4_desc">
+                        Most AI models have a "knowledge cutoff" date—the point in time when their training data ends. This means they may not know about very recent events, discoveries, or news, and will not warn you about this gap.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. What is Meta-Learning? -->
+        <section class="bg-white shadow-lg rounded-2xl p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s3_title">What is Meta-Learning?</h2>
+            <p class="text-center text-lg text-gray-600 mb-6 max-w-3xl mx-auto" data-lang-key="s3_p1">
+                Meta-learning is simply "thinking about your own thinking." In the context of AI, it means actively reflecting on how the tool is helping or hindering your own learning process.
+            </p>
+            <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto" data-lang-key="s3_p2">
+                It's the crucial difference between passively <em>using</em> AI to get an answer and actively <em>learning</em> from your interaction with it.
+            </p>
+        </section>
+        
+        <!-- 4. AI as a Learning Partner: Risks vs. Rewards -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10" data-lang-key="s4_title">AI as a Learning Partner: Risks vs. Rewards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- The Rewards -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500">
+                    <h3 class="flex items-center text-2xl font-bold text-green-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-lang-key="s4_rewards_title">The Rewards</span>
+                    </h3>
+                    <ul class="list-none space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✔</span>
+                            <span data-lang-key="s4_rewards_li1"><strong>Personalized Tutor:</strong> Explaining complex topics in simple terms, 24/7.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✔</span>
+                            <span data-lang-key="s4_rewards_li2"><strong>Brainstorming Partner:</strong> Generating new ideas and perspectives you hadn't considered.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✔</span>
+                            <span data-lang-key="s4_rewards_li3"><strong>Summarizer:</strong> Condensing long texts or articles to help you find the key points quickly.</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- The Risks -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="flex items-center text-2xl font-bold text-red-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <span data-lang-key="s4_risks_title">The Risks</span>
+                    </h3>
+                    <ul class="list-none space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✖</span>
+                            <span data-lang-key="s4_risks_li1"><strong>Over-Reliance:</strong> Letting the AI do the thinking for you instead of grappling with the problem yourself.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✖</span>
+                            <span data-lang-key="s4_risks_li2"><strong>Automation Bias:</strong> Automatically trusting the AI's answer as correct without checking it.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2">✖</span>
+                            <span data-lang-key="s4_risks_li3"><strong>Reduced Critical Thinking:</strong> Losing the valuable skill of finding and evaluating information yourself.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Developing Your Meta-Learning Habits -->
+        <section class="bg-indigo-50 border-l-4 border-indigo-500 rounded-lg p-6 md:p-10 mb-12">
+            <h2 class="text-3xl font-bold text-indigo-800 text-center mb-6" data-lang-key="s5_title">Developing Your Meta-Learning Habits</h2>
+            <p class="text-center text-lg text-indigo-700 mb-8 max-w-3xl mx-auto" data-lang-key="s5_subtitle">
+                After using an AI, ask yourself these questions to deepen your learning.
+            </p>
+            <div class="space-y-4">
+                <div class="bg-white p-5 rounded-lg shadow">
+                    <p class="text-lg text-gray-800" data-lang-key="s5_q1"><strong>1.</strong> Did the AI's answer truly help me <em>understand</em> the topic, or did I just copy the result?</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow">
+                    <p class="text-lg text-gray-800" data-lang-key="s5_q2"><strong>2.</strong> How did the AI's response differ from my own initial thoughts? Why?</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow">
+                    <p class="text-lg text-gray-800" data-lang-key="s5_q3"><strong>3.</strong> What parts of the AI's output did I need to verify or correct? What does that tell me about its limitations?</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow">
+                    <p class="text-lg text-gray-800" data-lang-key="s5_q4"><strong>4.</strong> Next time, how could I write a better prompt to get a more accurate or insightful response?</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chois AI윤리 및 문해력 교육</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            en: {
+                nav_title: 'AI Literacy',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '03. Mindful Evaluation &amp; Meta-Learning',
+                subtitle: 'Critical thinking about AI outputs and reflecting on how AI shapes our learning.',
+                s1_title: 'Don\'t Trust, Verify: The First Rule of AI',
+                s1_p1: 'An AI is not an oracle. It doesn\'t "know" things; it *predicts* the next most plausible word in a sentence. This means it is a powerful **"plausible text generator,"** not a **"truth generator."**',
+                s1_p2: 'This makes **you** the most important part of the process. You are the human-in-the-loop, the editor, and the final judge. Never accept an AI\'s output as fact without first evaluating it.',
+                s2_title: 'Common AI Pitfalls to Spot',
+                s2_subtitle: 'AI models can make mistakes. Your job is to be the critical editor. Here\'s what to look for.',
+                s2_item1_title: 'Hallucinations (Making Things Up)',
+                s2_item1_desc: 'This is when an AI confidently states a falsehood as if it were fact. It literally "makes things up" that sound plausible, like inventing a non-existent book, a fake historical event, or a made-up legal precedent.',
+                s2_item2_title: 'Bias (Reflecting Flawed Data)',
+                s2_item2_desc: 'AI models are trained on vast amounts of human-generated text from the internet, which contains historical and societal biases. The AI can learn and reproduce these biases, such as associating certain jobs with specific genders or ethnicities.',
+                s2_item3_title: 'Misinformation (Confidently Wrong)',
+                s2_item3_desc: 'Slightly different from hallucinations, this is when the AI confidently provides a factual error. For example, stating "The capital of Australia is Sydney" (it\'s Canberra). The information exists, but the AI gets it wrong.',
+                s2_item4_title: 'Outdated Information',
+                s2_item4_desc: 'Most AI models have a "knowledge cutoff" date—the point in time when their training data ends. This means they may not know about very recent events, discoveries, or news, and will not warn you about this gap.',
+                s3_title: 'What is Meta-Learning?',
+                s3_p1: 'Meta-learning is simply "thinking about your own thinking." In the context of AI, it means actively reflecting on how the tool is helping or hindering your own learning process.',
+                s3_p2: 'It\'s the crucial difference between passively *using* AI to get an answer and actively *learning* from your interaction with it.',
+                s4_title: 'AI as a Learning Partner: Risks vs. Rewards',
+                s4_rewards_title: 'The Rewards',
+                s4_rewards_li1: '<strong>Personalized Tutor:</strong> Explaining complex topics in simple terms, 24/7.',
+                s4_rewards_li2: '<strong>Brainstorming Partner:</strong> Generating new ideas and perspectives you hadn\'t considered.',
+                s4_rewards_li3: '<strong>Summarizer:</strong> Condensing long texts or articles to help you find the key points quickly.',
+                s4_risks_title: 'The Risks',
+                s4_risks_li1: '<strong>Over-Reliance:</strong> Letting the AI do the thinking for you instead of grappling with the problem yourself.',
+                s4_risks_li2: '<strong>Automation Bias:</strong> Automatically trusting the AI\'s answer as correct without checking it.',
+                s4_risks_li3: '<strong>Reduced Critical Thinking:</strong> Losing the valuable skill of finding and evaluating information yourself.',
+                s5_title: 'Developing Your Meta-Learning Habits',
+                s5_subtitle: 'After using an AI, ask yourself these questions to deepen your learning.',
+                s5_q1: '<strong>1.</strong> Did the AI\'s answer truly help me *understand* the topic, or did I just copy the result?',
+                s5_q2: '<strong>2.</strong> How did the AI\'s response differ from my own initial thoughts? Why?',
+                s5_q3: '<strong>3.</strong> What parts of the AI\'s output did I need to verify or correct? What does that tell me about its limitations?',
+                s5_q4: '<strong>4.</strong> Next time, how could I write a better prompt to get a more accurate or insightful response?'
+            },
+            zh: {
+                nav_title: 'AI素养',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '03. 审慎评估与元学习',
+                subtitle: '批判性地思考AI的输出，并反思AI如何塑造我们的学习方式。',
+                s1_title: '不要轻信，要核实：AI的第一法则',
+                s1_p1: 'AI不是无所不知的神谕。它不“知道”事情；它只是*预测*句子中下一个最合理的词。这意味着它是一个强大的**“合理文本生成器”**，而不是**“真相生成器”**。',
+                s1_p2: '这使得**您**成为过程中最重要的部分。您是“人在环路”中的关键，是编辑，也是最终的评判者。在没有首先评估AI的输出之前，永远不要将其视为事实。',
+                s2_title: '需要警惕的常见AI陷阱',
+                s2_subtitle: 'AI模型会犯错。您的工作是充当批判性的编辑。以下是需要注意的地方。',
+                s2_item1_title: '幻觉 (无中生有)',
+                s2_item1_desc: '指AI自信地将虚假信息陈述为事实。它会“编造”听起来合理的东西，比如捏造一本不存在的书、一个虚假的历史事件或一个编造的法律先例。',
+                s2_item2_title: '偏见 (反映有缺陷的数据)',
+                s2_item2_desc: 'AI模型是在大量人类生成的互联网文本上训练的，这些文本包含了历史和社会的偏见。AI会学习并复制这些偏见，例如将某些工作与特定性别或种族联系起来。',
+                s2_item3_title: '错误信息 (自信地出错)',
+                s2_item3_desc: '这与幻觉略有不同，这是指AI自信地提供了事实性错误。例如，声称“澳大利亚的首都是悉尼”（实际上是堪培拉）。信息是存在的，但AI搞错了。',
+                s2_item4_title: '过时信息',
+                s2_item4_desc: '大多数AI模型都有一个“知识截止日期”——即其训练数据结束的时间点。这意味着它们可能不知道最近发生的事件、发现或新闻，并且不会警告您这一信息差。',
+                s3_title: '什么是元学习？',
+                s3_p1: '元学习（Meta-Learning）简单来说就是“思考自己的思考过程”。在AI的背景下，它意味着积极反思这个工具是如何帮助或阻碍您自己的学习过程的。',
+                s3_p2: '这是被动地*使用*AI获取答案与主动地从与AI的互动中*学习*之间的关键区别。',
+                s4_title: 'AI作为学习伙伴：风险与回报',
+                s4_rewards_title: '回报',
+                s4_rewards_li1: '<strong>个性化导师：</strong> 7x24小时用简单的术语解释复杂的主题。',
+                s4_rewards_li2: '<strong>头脑风暴伙伴：</strong> 产生您未曾考虑过的新想法和新视角。',
+                s4_rewards_li3: '<strong>摘要器：</strong> 浓缩长篇文章，帮您快速找到要点。',
+                s4_risks_title: '风险',
+                s4_risks_li1: '<strong>过度依赖：</strong> 让AI代替您思考，而不是自己努力解决问题。',
+                s4_risks_li2: '<strong>自动化偏见：</strong> 不加核实地自动相信AI的答案是正确的。',
+                s4_risks_li3: '<strong>批判性思维能力下降：</strong> 逐渐丧失自己查找和评估信息的宝贵技能。',
+                s5_title: '培养您的元学习习惯',
+                s5_subtitle: '在使用AI后，问自己以下问题，以深化您的学习。',
+                s5_q1: '<strong>1.</strong> AI的答案是真的帮我*理解*了这个主题，还是我只是复制了结果？',
+                s5_q2: '<strong>2.</strong> AI的回答与我自己最初的想法有何不同？为什么？',
+                s5_q3: '<strong>3.</strong> AI输出的哪些部分我需要核实或纠正？这告诉我它的局限性是什么？',
+                s5_q4: '<strong>4.</strong> 下次，我怎样才能写出更好的提示，以获得更准确或更有见地的回应？'
+            },
+            ko: {
+                nav_title: 'AI 리터러시',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '03. 비판적 평가와 메타 학습',
+                subtitle: 'AI의 결과물을 비판적으로 사고하고, AI가 우리의 학습 방식을 어떻게 형성하는지 성찰합니다.',
+                s1_title: '신뢰하지 말고, 검증하라: AI의 제1원칙',
+                s1_p1: 'AI는 전지전능한 존재가 아닙니다. AI는 무언가를 "알고" 있는 것이 아니라, 문장에서 다음 단어로 가장 그럴듯한 것을 *예측*할 뿐입니다. 이는 AI가 **"진실 생성기"**가 아니라 강력한 **"그럴듯한 텍스트 생성기"**임을 의미합니다.',
+                s1_p2: '이것이 바로 **당신**을 이 과정에서 가장 중요한 부분으로 만듭니다. 당신은 "인간-루프-안에(human-in-the-loop)" 있는 존재이며, 편집자이자 최종 판단자입니다. AI의 결과물을 먼저 평가하지 않고 사실로 받아들여서는 안 됩니다.',
+                s2_title: '주의해야 할 AI의 일반적인 함정',
+                s2_subtitle: 'AI 모델은 실수를 할 수 있습니다. 당신의 임무는 비판적인 편집자가 되는 것입니다. 다음은 주의해서 살펴봐야 할 것들입니다.',
+                s2_item1_title: '환각 (Hallucinations)',
+                s2_item1_desc: 'AI가 거짓을 마치 사실인 것처럼 자신 있게 말하는 것입니다. 존재하지 않는 책, 가짜 역사적 사건, 조작된 법적 판례처럼 그럴듯하게 들리는 것을 말 그대로 "지어내는" 것입니다.',
+                s2_item2_title: '편향 (Bias)',
+                s2_item2_desc: 'AI 모델은 역사적, 사회적 편견이 포함된 방대한 양의 인터넷 텍스트로 학습됩니다. AI는 이러한 편견을 학습하고 재현할 수 있으며, 예를 들어 특정 직업을 특정 성별이나 민족과 연관 짓는 것과 같습니다.',
+                s2_item3_title: '잘못된 정보 (Misinformation)',
+                s2_item3_desc: '환각과는 약간 다르게, AI가 자신 있게 사실적 오류를 제공하는 것입니다. 예를 들어, "호주의 수도는 시드니"라고 말하는 것입니다(실제로는 캔버라). 정보는 존재하지만 AI가 틀리게 알고 있는 것입니다.',
+                s2_item4_title: '오래된 정보',
+                s2_item4_desc: '대부분의 AI 모델은 "지식 컷오프" 날짜, 즉 훈련 데이터가 끝나는 시점을 가지고 있습니다. 이는 AI가 매우 최근의 사건, 발견 또는 뉴스에 대해 알지 못할 수 있으며 이러한 격차에 대해 경고하지 않을 것임을 의미합니다.',
+                s3_title: '메타 학습이란 무엇인가?',
+                s3_p1: '메타 학습(Meta-Learning)은 간단히 "자신의 사고에 대해 생각하는 것"입니다. AI의 맥락에서, 이는 도구가 자신의 학습 과정을 어떻게 돕고 있는지 또는 방해하고 있는지를 적극적으로 성찰하는 것을 의미합니다.',
+                s3_p2: '이는 수동적으로 AI를 *사용하여* 답을 얻는 것과, AI와의 상호작용을 통해 능동적으로 *학습*하는 것 사이의 결정적인 차이입니다.',
+                s4_title: '학습 파트너로서의 AI: 위험과 보상',
+                s4_rewards_title: '보상',
+                s4_rewards_li1: '<strong>개인화된 튜터:</strong> 복잡한 주제를 연중무휴 24시간 간단한 용어로 설명해줍니다.',
+                s4_rewards_li2: '<strong>브레인스토밍 파트너:</strong> 당신이 고려하지 못했던 새로운 아이디어와 관점을 생성합니다.',
+                s4_rewards_li3: '<strong>요약기:</strong> 긴 텍스트나 기사를 요약하여 핵심 사항을 빠르게 파악할 수 있도록 도와줍니다.',
+                s4_risks_title: '위험',
+                s4_risks_li1: '<strong>과도한 의존:</strong> 문제와 씨름하는 대신 AI가 대신 생각하도록 내버려 두는 것입니다.',
+                s4_risks_li2: '<strong>자동화 편향:</strong> AI의 답변을 확인하지 않고 자동으로 옳다고 신뢰하는 것입니다.',
+                s4_risks_li3: '<strong>비판적 사고 감소:</strong> 스스로 정보를 찾고 평가하는 귀중한 기술을 잃어버리는 것입니다.',
+                s5_title: '메타 학습 습관 기르기',
+                s5_subtitle: 'AI를 사용한 후, 학습을 심화하기 위해 스스로에게 다음 질문들을 해보세요.',
+                s5_q1: '<strong>1.</strong> AI의 답변이 주제를 *이해*하는 데 정말 도움이 되었나, 아니면 그냥 결과를 복사했나?',
+                s5_q2: '<strong>2.</strong> AI의 응답은 내 처음 생각과 어떻게 달랐나? 그 이유는 무엇인가?',
+                s5_q3: '<strong>3.</strong> AI 결과물 중 어떤 부분을 검증하거나 수정해야 했나? 이는 AI의 한계에 대해 무엇을 말해주는가?',
+                s5_q4: '<strong>4.</strong> 다음번에는 더 정확하거나 통찰력 있는 응답을 얻기 위해 어떻게 더 나은 프롬프트를 작성할 수 있을까?'
+            }
+        };
+
+        // --- Language Switcher Logic ---
+        function changeLanguage(lang) {
+            if (!translations[lang]) return;
+
+            // Update all text elements
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update <html> lang attribute
+            document.documentElement.lang = lang;
+
+            // Update button styles
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.id === `lang-${lang}`) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+
+        // --- Accordion Logic (if you later add accordion sections) ---
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-accordion-target');
+                const targetBody = document.querySelector(targetId);
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                targetBody.classList.toggle('hidden');
+                button.setAttribute('aria-expanded', !isExpanded);
+            });
+        });
+        
+        // Initial language: HTML is already in English, so no need to call changeLanguage('en') on load.
+    </script>
+
+</body>
+</html>

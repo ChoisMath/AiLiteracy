@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chois AI Literacy: Synergy &amp; Growth</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom gradient for the title letter */
+        .title-circle {
+            background: linear-gradient(135deg, #14B8A6, #22C55E);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Language Switcher -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-indigo-600">Chois</span>
+                <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI Literacy</span>
+            </div>
+            
+            <!-- Language Buttons -->
+            <div class="flex space-x-2">
+                <button
+                    id="lang-en"
+                    onclick="changeLanguage('en')"
+                    class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full"
+                    data-lang-key="lang_en"
+                >
+                    English
+                </button>
+                <button
+                    id="lang-zh"
+                    onclick="changeLanguage('zh')"
+                    class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full"
+                    data-lang-key="lang_zh"
+                >
+                    中文
+                </button>
+                <button
+                    id="lang-ko"
+                    onclick="changeLanguage('ko')"
+                    class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full"
+                    data-lang-key="lang_ko"
+                >
+                    한국어
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:px-8">
+
+        <!-- Section Title -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900" data-lang-key="title">06. Synergy &amp; Growth</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="subtitle">
+                Developing human-AI collaboration (co-intelligence) and adapting to technological change.
+            </p>
+        </section>
+
+        <!-- 1. The Rise of Co-Intelligence -->
+        <section class="bg-white shadow-lg rounded-2xl overflow-hidden mb-16">
+            <div class="md:flex">
+                <!-- Visual Placeholder -->
+                <div class="md:w-1/2">
+                    <img
+                        src="https://placehold.co/600x400/ccfbf1/0d9488?text=Human+AI+Synergy"
+                        alt="Illustration of a human brain and an AI chip working together"
+                        class="w-full h-64 md:h-full object-cover"
+                    />
+                </div>
+                <!-- Content -->
+                <div class="md:w-1/2 p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-4" data-lang-key="s1_title">
+                        Beyond Tools: The Rise of Co-Intelligence
+                    </h2>
+                    <p class="text-gray-700 mb-4" data-lang-key="s1_p1">
+                        Synergy is the idea that the combined result is greater than the sum of its parts (1 + 1 = 3). An AI is not just a tool, like a hammer. It's an active collaborator.
+                    </p>
+                    <p class="text-gray-700" data-lang-key="s1_p2">
+                        This partnership is "Co-Intelligence." It's about combining your uniquely human strengths (like creativity and empathy) with an AI's strengths (like speed and data analysis) to achieve things neither of you could alone.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2. Human Strengths vs. AI Strengths -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10" data-lang-key="s2_title">
+                Your Strengths vs. AI's Strengths
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Human Strengths -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="flex items-center text-2xl font-bold text-blue-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                            ></path>
+                        </svg>
+                        <span data-lang-key="s2_human_title">Your Strengths (The Human)</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s2_human_li1">
+                            <strong>Critical Thinking:</strong> Questioning, evaluating, and deciding *why* something is true.
+                        </li>
+                        <li data-lang-key="s2_human_li2">
+                            <strong>Empathy &amp; Emotion:</strong> Understanding human feelings, context, and the "why" behind an action.
+                        </li>
+                        <li data-lang-key="s2_human_li3">
+                            <strong>Moral &amp; Ethical Judgment:</strong> Deciding what is *right*, not just what is *plausible*.
+                        </li>
+                        <li data-lang-key="s2_human_li4">
+                            <strong>Creativity &amp; Originality:</strong> Having a truly new idea or inspiration based on life experience.
+                        </li>
+                        <li data-lang-key="s2_human_li5">
+                            <strong>Common Sense:</strong> Understanding the physical world and unwritten social rules.
+                        </li>
+                    </ul>
+                </div>
+                <!-- AI Strengths -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-teal-500">
+                    <h3 class="flex items-center text-2xl font-bold text-teal-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"
+                            ></path>
+                        </svg>
+                        <span data-lang-key="s2_ai_title">AI's Strengths (The Collaborator)</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s2_ai_li1">
+                            <strong>Speed &amp; Scale:</strong> Reading a thousand books in a second to find a single fact.
+                        </li>
+                        <li data-lang-key="s2_ai_li2">
+                            <strong>Pattern Recognition:</strong> Finding subtle patterns in massive datasets that no human could see.
+                        </li>
+                        <li data-lang-key="s2_ai_li3">
+                            <strong>Data Processing:</strong> Summarizing, translating, formatting, and analyzing huge amounts of data.
+                        </li>
+                        <li data-lang-key="s2_ai_li4">
+                            <strong>Tireless Execution:</strong> Performing repetitive tasks 24/7 without fatigue or boredom.
+                        </li>
+                        <li data-lang-key="s2_ai_li5">
+                            <strong>Factual Recall:</strong> Instantly recalling any information from its training data.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. From Artificial to Augmented Intelligence -->
+        <section class="bg-white shadow-lg rounded-2xl p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s3_title">
+                From Artificial to "Augmented" Intelligence
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-6 max-w-3xl mx-auto" data-lang-key="s3_p1">
+                The best way to think about this technology is not as "Artificial Intelligence" (AI) but as "Augmented Intelligence" (IA). The goal is not to *replace* human thought, but to *amplify* it.
+            </p>
+            <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto" data-lang-key="s3_p2">
+                Think of yourself as a pilot and the AI as an advanced co-pilot. The co-pilot can handle massive calculations, scan for targets, and manage complex systems, freeing you—the pilot—to focus on the mission, make strategic decisions, and navigate unknown territory.
+            </p>
+        </section>
+        
+        <!-- 4. Preparing for a Changing World -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s4_title">
+                Preparing for a Changing World
+            </h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto" data-lang-key="s4_subtitle">
+                "Growth" is the second half of "S". Technology will always change. Your ability to adapt is your most valuable asset.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Lifelong Learning -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 21v-1"
+                                ></path>
+                            </svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s4_item1_title">
+                            Embrace Lifelong Learning
+                        </h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s4_item1_desc">
+                        The AI tools of today will be obsolete in five years. Your ability to *learn how to use* new tools is more important than mastering any single one.
+                    </p>
+                </div>
+
+                <!-- Human-Only Skills -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                ></path>
+                            </svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s4_item2_title">
+                            Focus on "Human-Only" Skills
+                        </h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s4_item2_desc">
+                        Double down on the skills AI *cannot* replicate: empathy, leadership, building trust, complex team-based problem-solving, and genuine creativity.
+                    </p>
+                </div>
+
+                <!-- Growth Mindset -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                                ></path>
+                            </svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s4_item3_title">
+                            Maintain a Growth Mindset
+                        </h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s4_item3_desc">
+                        See AI not as a threat, but as a challenge and an opportunity to evolve. Stay curious, ask questions, and don't be afraid to experiment with new ways of working.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chois AI 윤리 및 문해력 교육</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            en: {
+                nav_title: 'AI Literacy',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '06. Synergy &amp; Growth',
+                subtitle: 'Developing human-AI collaboration (co-intelligence) and adapting to technological change.',
+                s1_title: 'Beyond Tools: The Rise of Co-Intelligence',
+                s1_p1: 'Synergy is the idea that the combined result is greater than the sum of its parts (1 + 1 = 3). An AI is not just a tool, like a hammer. It\'s an active collaborator.',
+                s1_p2: 'This partnership is "Co-Intelligence." It\'s about combining your uniquely human strengths (like creativity and empathy) with an AI\'s strengths (like speed and data analysis) to achieve things neither of you could alone.',
+                s2_title: 'Your Strengths vs. AI\'s Strengths',
+                s2_human_title: 'Your Strengths (The Human)',
+                s2_human_li1: '<strong>Critical Thinking:</strong> Questioning, evaluating, and deciding *why* something is true.',
+                s2_human_li2: '<strong>Empathy &amp; Emotion:</strong> Understanding human feelings, context, and the "why" behind an action.',
+                s2_human_li3: '<strong>Moral &amp; Ethical Judgment:</strong> Deciding what is *right*, not just what is *plausible*.',
+                s2_human_li4: '<strong>Creativity &amp; Originality:</strong> Having a truly new idea or inspiration based on life experience.',
+                s2_human_li5: '<strong>Common Sense:</strong> Understanding the physical world and unwritten social rules.',
+                s2_ai_title: 'AI\'s Strengths (The Collaborator)',
+                s2_ai_li1: '<strong>Speed &amp; Scale:</strong> Reading a thousand books in a second to find a single fact.',
+                s2_ai_li2: '<strong>Pattern Recognition:</strong> Finding subtle patterns in massive datasets that no human could see.',
+                s2_ai_li3: '<strong>Data Processing:</strong> Summarizing, translating, formatting, and analyzing huge amounts of data.',
+                s2_ai_li4: '<strong>Tireless Execution:</strong> Performing repetitive tasks 24/7 without fatigue or boredom.',
+                s2_ai_li5: '<strong>Factual Recall:</strong> Instantly recalling any information from its training data.',
+                s3_title: 'From Artificial to "Augmented" Intelligence',
+                s3_p1: 'The best way to think about this technology is not as "Artificial Intelligence" (AI) but as "Augmented Intelligence" (IA). The goal is not to *replace* human thought, but to *amplify* it.',
+                s3_p2: 'Think of yourself as a pilot and the AI as an advanced co-pilot. The co-pilot can handle massive calculations, scan for targets, and manage complex systems, freeing you—the pilot—to focus on the mission, make strategic decisions, and navigate unknown territory.',
+                s4_title: 'Preparing for a Changing World',
+                s4_subtitle: '"Growth" is the second half of "S". Technology will always change. Your ability to adapt is your most valuable asset.',
+                s4_item1_title: 'Embrace Lifelong Learning',
+                s4_item1_desc: 'The AI tools of today will be obsolete in five years. Your ability to *learn how to use* new tools is more important than mastering any single one.',
+                s4_item2_title: 'Focus on "Human-Only" Skills',
+                s4_item2_desc: 'Double down on the skills AI *cannot* replicate: empathy, leadership, building trust, complex team-based problem-solving, and genuine creativity.',
+                s4_item3_title: 'Maintain a Growth Mindset',
+                s4_item3_desc: 'See AI not as a threat, but as a challenge and an opportunity to evolve. Stay curious, ask questions, and don\'t be afraid to experiment with new ways of working.'
+            },
+            zh: {
+                nav_title: 'AI素养',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '06. 协同与成长',
+                subtitle: '发展人机协作（共同智能）并适应技术变革。',
+                s1_title: '超越工具：共同智能的崛起',
+                s1_p1: '协同（Synergy）是指“整体大于部分之和”（1 + 1 = 3）的理念。AI不仅仅是一个工具，比如锤子。它是一个积极的协作者。',
+                s1_p2: '这种伙伴关系就是“共同智能”（Co-Intelligence）。它关乎将您独特的人类优势（如创造力和同理心）与AI的优势（如速度和数据分析）相结合，以实现任何一方都无法单独完成的事情。',
+                s2_title: '您的优势 vs. AI的优势',
+                s2_human_title: '您的优势（人类）',
+                s2_human_li1: '<strong>批判性思维：</strong> 提出质疑、进行评估，并决定某事*为什么*是真的。',
+                s2_human_li2: '<strong>同理心与情感：</strong> 理解人类的感受、情境以及行为背后的“为什么”。',
+                s2_human_li3: '<strong>道德与伦理判断：</strong> 决定什么是*正确*的，而不仅仅是什么是*貌似合理*的。',
+                s2_human_li4: '<strong>创造力与原创性：</strong> 基于生活经验产生真正的新想法或灵感。',
+                s2_human_li5: '<strong>常识：</strong> 理解物理世界和不成文的社会规则。',
+                s2_ai_title: 'AI的优势（协作者）',
+                s2_ai_li1: '<strong>速度与规模：</strong> 在一秒钟内阅读一千本书以查找一个事实。',
+                s2_ai_li2: '<strong>模式识别：</strong> 在海量数据集中找到人类无法察觉的微妙模式。',
+                s2_ai_li3: '<strong>数据处理：</strong> 总结、翻译、格式化和分析大量数据。',
+                s2_ai_li4: '<strong>不知疲倦的执行：</strong> 7x24小时执行重复性任务而不会感到疲劳或厌倦。',
+                s2_ai_li5: '<strong>事实回忆：</strong> 立即回忆起其训练数据中的任何信息。',
+                s3_title: '从“人工智能”到“增强智能”',
+                s3_p1: '理解这项技术的最佳方式不是将其视为“人工智能”（Artificial Intelligence, AI），而是“增强智能”（Augmented Intelligence, IA）。其目标不是*取代*人类的思考，而是*放大*它。',
+                s3_p2: '把自己想象成飞行员，把AI想象成高级副驾驶。副驾驶可以处理海量计算、扫描目标并管理复杂系统，从而让您——飞行员——能够专注于任务、制定战略决策并驾驭未知领域。',
+                s4_title: '为不断变化的世界做准备',
+                s4_subtitle: '“成长”是“S”的后半部分。技术总是在变化。您的适应能力是您最宝贵的资产。',
+                s4_item1_title: '拥抱终身学习',
+                s4_item1_desc: '今天的AI工具在五年内就可能过时。您*学习如何使用*新工具的能力比掌握任何单一工具更重要。',
+                s4_item2_title: '专注于“仅限人类”的技能',
+                s4_item2_desc: '加倍投入AI*无法*复制的技能：同理心、领导力、建立信任、基于团队的复杂问题解决能力以及真正的创造力。',
+                s4_item3_title: '保持成长型思维',
+                s4_item3_desc: '不要将AI视为威胁，而是将其视为挑战和进化的机会。保持好奇心，提出问题，不要害怕尝试新的工作方式。'
+            },
+            ko: {
+                nav_title: 'AI 리터러시',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '06. 시너지와 성장',
+                subtitle: '인간-AI 협업(공동 지능)을 개발하고 기술 변화에 적응합니다.',
+                s1_title: '도구를 넘어: 공동 지능의 부상',
+                s1_p1: '시너지(Synergy)는 결합된 결과가 각 부분의 합보다 크다는 아이디어입니다 (1 + 1 = 3). AI는 망치와 같은 단순한 도구가 아닙니다. 그것은 능동적인 협력자입니다.',
+                s1_p2: '이러한 파트너십이 바로 "공동 지능(Co-Intelligence)"입니다. 이는 창의력과 공감 능력 같은 인간 고유의 강점과 속도, 데이터 분석 같은 AI의 강점을 결합하여, 둘 중 누구도 혼자서는 이룰 수 없는 것을 성취하는 것입니다.',
+                s2_title: '당신의 강점 vs. AI의 강점',
+                s2_human_title: '당신의 강점 (인간)',
+                s2_human_li1: '<strong>비판적 사고:</strong> 질문하고, 평가하며, 어떤 것이 *왜* 사실인지 결정하는 능력.',
+                s2_human_li2: '<strong>공감 및 감정:</strong> 인간의 감정, 맥락, 그리고 행동 뒤에 숨겨진 "이유"를 이해하는 능력.',
+                s2_human_li3: '<strong>도덕적 및 윤리적 판단:</strong> 단지 *그럴듯한* 것이 아니라 *옳은* 것이 무엇인지 결정하는 능력.',
+                s2_human_li4: '<strong>창의성 및 독창성:</strong> 삶의 경험을 바탕으로 진정으로 새로운 아이디어나 영감을 떠올리는 능력.',
+                s2_human_li5: '<strong>상식:</strong> 물리적 세계와 불문율의 사회적 규칙을 이해하는 능력.',
+                s2_ai_title: 'AI의 강점 (협력자)',
+                s2_ai_li1: '<strong>속도 및 규모:</strong> 단 하나의 사실을 찾기 위해 1초 만에 천 권의 책을 읽는 능력.',
+                s2_ai_li2: '<strong>패턴 인식:</strong> 인간이 볼 수 없는 방대한 데이터 세트에서 미묘한 패턴을 찾는 능력.',
+                s2_ai_li3: '<strong>데이터 처리:</strong> 방대한 양의 데이터를 요약, 번역, 서식 지정 및 분석하는 능력.',
+                s2_ai_li4: '<strong>지칠 줄 모르는 실행:</strong> 피로나 지루함 없이 연중무휴 24시간 반복적인 작업을 수행하는 능력.',
+                s2_ai_li5: '<strong>사실적 기억:</strong> 훈련 데이터에 있는 모든 정보를 즉시 기억해내는 능력.',
+                s3_title: '"인공" 지능에서 "증강" 지능으로',
+                s3_p1: '이 기술을 생각하는 가장 좋은 방법은 "인공 지능(Artificial Intelligence, AI)"이 아니라 "증강 지능(Augmented Intelligence, IA)"으로 보는 것입니다. 목표는 인간의 사고를 *대체*하는 것이 아니라 *증폭*하는 것입니다.',
+                s3_p2: '자신을 조종사로, AI를 고급 부조종사로 생각해보십시오. 부조종사는 방대한 계산을 처리하고, 목표를 스캔하며, 복잡한 시스템을 관리하여, 조종사인 당신이 임무에 집중하고, 전략적 결정을 내리며, 미지의 영역을 항해할 수 있도록 해줍니다.',
+                s4_title: '변화하는 세계에 대비하기',
+                s4_subtitle: '"성장"은 "S"의 후반부입니다. 기술은 항상 변할 것입니다. 적응하는 능력이 당신의 가장 귀중한 자산입니다.',
+                s4_item1_title: '평생 학습을 수용하라',
+                s4_item1_desc: '오늘날의 AI 도구는 5년 안에 쓸모없어질 것입니다. 새로운 도구를 *사용하는 법을 배우는* 당신의 능력이 단일 도구를 마스터하는 것보다 더 중요합니다.',
+                s4_item2_title: '"인간 고유" 기술에 집중하라',
+                s4_item2_desc: 'AI가 복제할 수 *없는* 기술에 두 배로 투자하십시오: 공감, 리더십, 신뢰 구축, 복잡한 팀 기반 문제 해결 및 진정한 창의성.',
+                s4_item3_title: '성장 마인드셋을 유지하라',
+                s4_item3_desc: 'AI를 위협이 아닌, 도전이자 진화의 기회로 보십시오. 호기심을 갖고, 질문하며, 새로운 작업 방식을 실험하는 것을 두려워하지 마십시오.'
+            }
+        };
+
+        // --- Language Switcher Logic ---
+        function changeLanguage(lang) {
+            if (!translations[lang]) return;
+
+            // Update all text elements
+            document.querySelectorAll('[data-lang-key]').forEach((element) => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update <html> lang attribute
+            document.documentElement.lang = lang;
+
+            // Update button styles
+            document.querySelectorAll('.lang-btn').forEach((btn) => {
+                if (btn.id === `lang-${lang}`) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+        
+        // HTML 기본 언어가 영어라서, 초기에는 changeLanguage('en') 호출이 필요 없습니다.
+    </script>
+
+</body>
+</html>

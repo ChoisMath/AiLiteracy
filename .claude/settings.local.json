@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(temp_01_trans.txt)",
+      "Bash(start chrome:*)",
+      "Bash(dir:*)",
+      "Bash(start cmd /k \"python -m http.server 8000\")",
+      "Bash(timeout:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

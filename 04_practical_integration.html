@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chois AI Literacy: Practical Integration</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom gradient for the title letter */
+        .title-circle {
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Language Switcher -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-indigo-600">Chois</span>
+                <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI Literacy</span>
+            </div>
+            
+            <!-- Language Buttons -->
+            <div class="flex space-x-2">
+                <button id="lang-en" onclick="changeLanguage('en')" class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_en">English</button>
+                <button id="lang-zh" onclick="changeLanguage('zh')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_zh">中文</button>
+                <button id="lang-ko" onclick="changeLanguage('ko')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_ko">한국어</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Section Title -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900" data-lang-key="title">04. Practical Integration</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="subtitle">
+                Incorporating AI into workflows and learning processes effectively, and citing AI properly.
+            </p>
+        </section>
+
+        <!-- 1. AI in Your Daily Workflow -->
+        <section class="bg-white shadow-lg rounded-2xl overflow-hidden mb-16">
+            <div class="md:flex">
+                <!-- Visual Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/eef2ff/4338ca?text=AI+in+Your+Workflow" alt="Illustration of AI integrated into a computer workflow" class="w-full h-64 md:h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div class="md:w-1/2 p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-indigo-600 mb-4" data-lang-key="s1_title">AI in Your Daily Workflow</h2>
+                    <p class="text-gray-700 mb-4" data-lang-key="s1_p1">
+                        Practical integration means moving beyond just "playing" with AI and strategically using it to enhance your productivity, creativity, and learning.
+                    </p>
+                    <p class="text-gray-700" data-lang-key="s1_p2">
+                        It's about identifying tasks where AI can be a powerful assistant, not a replacement for your own thinking. The goal is to automate the tedious parts of your work so you can focus on the creative and critical parts.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2. Real-World Scenarios -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s2_title">Real-World Scenarios</h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto" data-lang-key="s2_subtitle">
+                AI can wear many hats. Think of it as a specialist you can call on for specific tasks.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Writing Assistant -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item1_title">As a Writing Assistant</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item1_desc">Use AI to brainstorm outlines, overcome writer's block, generate first drafts, improve your grammar, or rephrase a paragraph in a different tone (e.g., "make this more professional").</p>
+                </div>
+
+                <!-- Coding Partner -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item2_title">As a Coding Partner</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item2_desc">Use AI to explain a complex piece of code, translate code from one language to another, write boilerplate functions, or find bugs (debug) in your script.</p>
+                </div>
+
+                <!-- Brainstorming Tool -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 21v-1"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item3_title">As a Brainstorming Tool</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item3_desc">Stuck for an idea? Ask an AI to act as a creative partner. "Give me 10 ideas for a marketing campaign for a new coffee shop" or "What are some counter-arguments to this thesis statement?"</p>
+                </div>
+                
+                <!-- Personalized Tutor -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item4_title">As a Personalized Tutor</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item4_desc">Use AI to learn at your own pace. "Explain quantum physics to me like I'm a 10-year-old" or "Quiz me on the main causes of World War I" or "Teach me 10 basic phrases in Japanese."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. The Importance of Citing AI -->
+        <section class="bg-white shadow-lg rounded-2xl p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s3_title">The Importance of Citing AI</h2>
+            <p class="text-center text-lg text-gray-600 mb-8 max-w-3xl mx-auto" data-lang-key="s3_p1">
+                Just as you cite books, articles, and websites, you must cite AI when you use its ideas, text, or data. This is a core part of academic and professional integrity.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Why Cite? -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3" data-lang-key="s3_why_title">Why Cite AI?</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li data-lang-key="s3_why_li1"><strong>Transparency:</strong> It shows your audience (like a professor or a boss) exactly what parts of the work are yours and what parts were assisted by AI.</li>
+                        <li data-lang-key="s3_why_li2"><strong>Accountability:</strong> Since AI can hallucinate, citing it shows you are aware of the source and allows others to trace the origin of the information.</li>
+                        <li data-lang-key="s3_why_li3"><strong>Honesty:</strong> It is dishonest to pass off AI-generated text as your own original thought.</li>
+                    </ul>
+                </div>
+                <!-- How to Cite? -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3" data-lang-key="s3_how_title">How to Cite AI (Examples)</h3>
+                    <p class="text-gray-700 mb-4" data-lang-key="s3_how_p1">Citation styles are evolving. Always follow your institution's specific guidelines. Here are common formats:</p>
+                    <div class="mb-4">
+                        <strong class="text-gray-800">MLA 9 Style:</strong>
+                        <p class="text-gray-700 text-sm italic bg-gray-200 p-2 rounded">"Description of prompt" prompt. [Name of AI model], [Date of prompt], [Name of company].</p>
+                    </div>
+                    <div>
+                        <strong class="text-gray-800">APA 7 Style:</strong>
+                        <p class="text-gray-700 text-sm italic bg-gray-200 p-2 rounded">[Company]. (Year). *[Name of AI model]* (Large language model). https://www.ibm.com/think/topics/ai-model</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. Effective vs. Ineffective Workflows -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-10" data-lang-key="s4_title">Effective vs. Ineffective Workflows</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Effective -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500">
+                    <h3 class="flex items-center text-2xl font-bold text-green-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span data-lang-key="s4_eff_title">Effective Integration</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s4_eff_li1"><strong>Human-in-the-Loop:</strong> You are the director, the AI is the assistant.</li>
+                        <li data-lang-key="s4_eff_li2"><strong>AI as a Springboard:</strong> Use AI to generate a first draft or ideas, then take over to add your unique voice, insights, and facts.</li>
+                        <li data-lang-key="s4_eff_li3"><strong>Automating Tedium:</strong> Use AI for tasks that drain your time, like formatting data, writing simple emails, or summarizing meeting notes.</li>
+                    </ul>
+                </div>
+                <!-- Ineffective -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="flex items-center text-2xl font-bold text-red-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span data-lang-key="s4_ineff_title">Ineffective Integration</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s4_ineff_li1"><strong>Human-out-of-the-Loop:</strong> Copying and pasting AI output without reading, verifying, or editing it.</li>
+                        <li data-lang-key="s4_ineff_li2"><strong>AI as a Crutch:</strong> Relying on AI to do all the creative and critical thinking, leading to skill erosion.</li>
+                        <li data-lang-key="s4_ineff_li3"><strong>Inappropriate Use:</strong> Using AI for tasks that require genuine human empathy, personal reflection, or sensitive decision-making.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chois AI Literacy Framework</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            'en': {
+                'nav_title': 'AI Literacy',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '04. Practical Integration',
+                'subtitle': 'Incorporating AI into workflows and learning processes effectively, and citing AI properly.',
+                's1_title': 'AI in Your Daily Workflow',
+                's1_p1': 'Practical integration means moving beyond just "playing" with AI and strategically using it to enhance your productivity, creativity, and learning.',
+                's1_p2': 'It\'s about identifying tasks where AI can be a powerful assistant, not a replacement for your own thinking. The goal is to automate the tedious parts of your work so you can focus on the creative and critical parts.',
+                's2_title': 'Real-World Scenarios',
+                's2_subtitle': 'AI can wear many hats. Think of it as a specialist you can call on for specific tasks.',
+                's2_item1_title': 'As a Writing Assistant',
+                's2_item1_desc': 'Use AI to brainstorm outlines, overcome writer\'s block, generate first drafts, improve your grammar, or rephrase a paragraph in a different tone (e.g., "make this more professional").',
+                's2_item2_title': 'As a Coding Partner',
+                's2_item2_desc': 'Use AI to explain a complex piece of code, translate code from one language to another, write boilerplate functions, or find bugs (debug) in your script.',
+                's2_item3_title': 'As a Brainstorming Tool',
+                's2_item3_desc': 'Stuck for an idea? Ask an AI to act as a creative partner. "Give me 10 ideas for a marketing campaign for a new coffee shop" or "What are some counter-arguments to this thesis statement?"',
+                's2_item4_title': 'As a Personalized Tutor',
+                's2_item4_desc': 'Use AI to learn at your own pace. "Explain quantum physics to me like I\'m a 10-year-old" or "Quiz me on the main causes of World War I" or "Teach me 10 basic phrases in Japanese."',
+                's3_title': 'The Importance of Citing AI',
+                's3_p1': 'Just as you cite books, articles, and websites, you must cite AI when you use its ideas, text, or data. This is a core part of academic and professional integrity.',
+                's3_why_title': 'Why Cite AI?',
+                's3_why_li1': '<strong>Transparency:</strong> It shows your audience (like a professor or a boss) exactly what parts of the work are yours and what parts were assisted by AI.',
+                's3_why_li2': '<strong>Accountability:</strong> Since AI can hallucinate, citing it shows you are aware of the source and allows others to trace the origin of the information.',
+                's3_why_li3': '<strong>Honesty:</strong> It is dishonest to pass off AI-generated text as your own original thought.',
+                's3_how_title': 'How to Cite AI (Examples)',
+                's3_how_p1': 'Citation styles are evolving. Always follow your institution\'s specific guidelines. Here are common formats:',
+                's4_title': 'Effective vs. Ineffective Workflows',
+                's4_eff_title': 'Effective Integration',
+                's4_eff_li1': '<strong>Human-in-the-Loop:</strong> You are the director, the AI is the assistant.',
+                's4_eff_li2': '<strong>AI as a Springboard:</strong> Use AI to generate a first draft or ideas, then take over to add your unique voice, insights, and facts.',
+                's4_eff_li3': '<strong>Automating Tedium:</strong> Use AI for tasks that drain your time, like formatting data, writing simple emails, or summarizing meeting notes.',
+                's4_ineff_title': 'Ineffective Integration',
+                's4_ineff_li1': '<strong>Human-out-of-the-Loop:</strong> Copying and pasting AI output without reading, verifying, or editing it.',
+                's4_ineff_li2': '<strong>AI as a Crutch:</strong> Relying on AI to do all the creative and critical thinking, leading to skill erosion.',
+                's4_ineff_li3': '<strong>Inappropriate Use:</strong> Using AI for tasks that require genuine human empathy, personal reflection, or sensitive decision-making.'
+            },
+            'zh': {
+                'nav_title': 'AI素养',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '04. 实际整合',
+                'subtitle': '有效地将AI融入工作流程和学习过程中，并正确地引用AI。',
+                's1_title': 'AI在您的日常工作流程中',
+                's1_p1': '实际整合意味着超越“玩弄”AI的阶段，开始战略性地使用它来提高您的生产力、创造力和学习能力。',
+                's1_p2': '关键在于识别那些AI可以充当强大助手而不是替代您思考的任务。目标是自动化您工作中繁琐的部分，以便您可以专注于创造性和关键性的部分。',
+                's2_title': '实际应用场景',
+                's2_subtitle': 'AI可以扮演多种角色。把它想象成您可以随时调用来完成特定任务的专家。',
+                's2_item1_title': '作为写作助手',
+                's2_item1_desc': '使用AI来构思大纲、克服写作障碍、生成初稿、改进语法，或以不同​​的语气改写段落（例如，“让这段话更专业”）。',
+                's2_item2_title': '作为编码伙伴',
+                's2_item2_desc': '使用AI来解释一段复杂的代码、将代码从一种语言翻译成另一种语言、编写样板函数，或在脚本中查找错误（调试）。',
+                's2_item3_title': '作为头脑风暴工具',
+                's2_item3_desc': '没有灵感？让AI充当创意伙伴。“为一家新咖啡店给我10个营销活动创意”或“这个论点有哪些反驳的观点？”',
+                's2_item4_title': '作为个性化导师',
+                's2_item4_desc': '使用AI按自己的节奏学习。“像给10岁孩子讲那样给我解释量子物理”或“考考我关于第一次世界大战的主要原因”或“教我10句基本的日语短语。”',
+                's3_title': '引用AI的重要性',
+                's3_p1': '就像您引用书籍、文章和网站一样，当您使用AI的想法、文本或数据时，您必须引用AI。这是学术和职业诚信的核心部分。',
+                's3_why_title': '为什么引用AI？',
+                's3_why_li1': '<strong>透明度：</strong> 它向您的受众（如教授或老板）清楚地展示了工作中哪些部分是您自己的，哪些部分是由AI辅助完成的。',
+                's3_why_li2': '<strong>可问责性：</strong> 由于AI可能会产生幻觉，引用它可以表明您意识到了信息的来源，并允许他人追溯信息的起源。',
+                's3_why_li3': '<strong>诚实：</strong> 将AI生成的文本冒充为您自己的原创思想是不诚实的。',
+                's3_how_title': '如何引用AI（示例）',
+                's3_how_p1': '引用样式在不断演变。请始终遵循您所在机构的具体指导方针。以下是常见的格式：',
+                's4_title': '有效的工作流程 vs. 无效的工作流程',
+                's4_eff_title': '有效整合',
+                's4_eff_li1': '<strong>人在环路：</strong> 您是导演，AI是助手。',
+                's4_eff_li2': '<strong>AI作为跳板：</strong> 使用AI生成初稿或创意，然后接手添加您独特的声音、见解和事实。',
+                's4_eff_li3': '<strong>自动化繁琐任务：</strong> 使用AI处理那些消耗您时间的任务，比如格式化数据、写简单的电子邮件或总结会议记录。',
+                's4_ineff_title': '无效整合',
+                's4_ineff_li1': '<strong>人不在环路：</strong> 不经阅读、核实或编辑就复制粘贴AI的输出。',
+                's4_ineff_li2': '<strong>AI作为拐杖：</strong> 依赖AI进行所有的创造性和批判性思考，导致技能退化。',
+                's4_ineff_li3': '<strong>使用不当：</strong> 将AI用于需要真正的人类同理心、个人反思或敏感决策的任务。'
+            },
+            'ko': {
+                'nav_title': 'AI 리터러시',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '04. 실질적인 통합',
+                'subtitle': 'AI를 워크플로우와 학습 과정에 효과적으로 통합하고, AI를 올바르게 인용합니다.',
+                's1_title': '일상 워크플로우 속의 AI',
+                's1_p1': '실질적인 통합이란 단순히 AI를 "가지고 노는" 것을 넘어, 생산성, 창의성, 학습 능력을 향상시키기 위해 전략적으로 AI를 사용하는 것을 의미합니다.',
+                's1_p2': 'AI가 당신의 생각을 대체하는 것이 아니라, 강력한 조력자가 될 수 있는 작업을 식별하는 것이 중요합니다. 목표는 작업의 지루한 부분을 자동화하여 창의적이고 비판적인 부분에 집중할 수 있도록 하는 것입니다.',
+                's2_title': '실제 적용 시나리오',
+                's2_subtitle': 'AI는 다양한 역할을 수행할 수 있습니다. 특정 작업을 위해 부를 수 있는 전문가라고 생각하세요.',
+                's2_item1_title': '작문 보조원',
+                's2_item1_desc': 'AI를 사용하여 개요를 브레인스토밍하고, 작가의 장벽을 극복하고, 초안을 작성하고, 문법을 개선하거나, 문단을 다른 어조로 바꾸는 데(예: "이것을 더 전문적으로 만들어줘") 사용하세요.',
+                's2_item2_title': '코딩 파트너',
+                's2_item2_desc': 'AI를 사용하여 복잡한 코드를 설명하고, 한 언어에서 다른 언어로 코드를 번역하고, 상용구 함수를 작성하거나, 스크립트에서 버그를 찾는 데(디버깅) 사용하세요.',
+                's2_item3_title': '브레인스토밍 도구',
+                's2_item3_desc': '아이디어가 막혔나요? AI에게 창의적인 파트너 역할을 요청하세요. "새로운 커피숍을 위한 마케팅 캠페인 아이디어 10가지를 줘" 또는 "이 주제에 대한 반론은 무엇이 있을까?"',
+                's2_item4_title': '개인화된 튜터',
+                's2_item4_desc': 'AI를 사용하여 자신만의 속도로 학습하세요. "10살 아이에게 설명하듯이 양자 물리학을 설명해줘" 또는 "제1차 세계대전의 주요 원인에 대해 퀴즈를 내줘" 또는 "일본어 기본 표현 10가지를 가르쳐줘."',
+                's3_title': 'AI 인용의 중요성',
+                's3_p1': '책, 기사, 웹사이트를 인용하는 것과 마찬가지로, AI의 아이디어, 텍스트 또는 데이터를 사용할 때도 AI를 인용해야 합니다. 이는 학문적, 직업적 무결성의 핵심 부분입니다.',
+                's3_why_title': 'AI를 인용하는 이유',
+                's3_why_li1': '<strong>투명성:</strong> 작업의 어느 부분이 당신의 것이고 어느 부분이 AI의 도움을 받았는지 청중(교수님이나 상사 등)에게 정확히 보여줍니다.',
+                's3_why_li2': '<strong>책임성:</strong> AI는 환각을 일으킬 수 있으므로, AI를 인용하면 정보의 출처를 알고 있음을 보여주고 다른 사람들이 정보의 출처를 추적할 수 있게 합니다.',
+                's3_why_li3': '<strong>정직성:</strong> AI가 생성한 텍스트를 자신의 독창적인 생각인 것처럼 속이는 것은 부정직한 행위입니다.',
+                's3_how_title': 'AI 인용 방법 (예시)',
+                's3_how_p1': '인용 스타일은 계속 발전하고 있습니다. 항상 소속 기관의 특정 가이드라인을 따르세요. 다음은 일반적인 형식입니다:',
+                's4_title': '효과적인 워크플로우 vs. 비효율적인 워크플로우',
+                's4_eff_title': '효과적인 통합',
+                's4_eff_li1': '<strong>인간 중심(Human-in-the-Loop):</strong> 당신이 감독이고, AI는 조수입니다.',
+                's4_eff_li2': '<strong>AI를 발판으로 사용:</strong> AI를 사용하여 초안이나 아이디어를 생성한 다음, 당신의 고유한 목소리, 통찰력, 사실을 추가하기 위해 이어받습니다.',
+                's4_eff_li3': '<strong>지루한 작업 자동화:</strong> 데이터 서식 지정, 간단한 이메일 작성, 회의록 요약 등 시간을 소모하는 작업에 AI를 사용합니다.',
+                's4_ineff_title': '비효율적인 통합',
+                's4_ineff_li1': '<strong>인간 부재(Human-out-of-the-Loop):</strong> AI의 결과물을 읽거나, 검증하거나, 편집하지 않고 복사하여 붙여넣습니다.',
+                's4_ineff_li2': '<strong>AI를 목발로 사용:</strong> 모든 창의적이고 비판적인 사고를 AI에 의존하여 기술이 퇴보하게 만듭니다.',
+                's4_ineff_li3': '<strong>부적절한 사용:</strong> 진정한 인간적 공감, 개인적 성찰 또는 민감한 의사 결정이 필요한 작업에 AI를 사용합니다.'
+            }
+        };
+
+        // --- Language Switcher Logic ---
+        function changeLanguage(lang) {
+            if (!translations[lang]) return;
+
+            // Update all text elements
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update <html> lang attribute
+            document.documentElement.lang = lang;
+
+            // Update button styles
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.id === `lang-${lang}`) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+        
+        // Initialize with default language (English)
+        // No need to call changeLanguage('en') on load, as the HTML is already in English.
+        
+    </script>
+
+</body>
+</html>

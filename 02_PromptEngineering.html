@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chois AI Literacy: Operational Skills</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom gradient for the title letter */
+        .title-circle {
+            background: linear-gradient(135deg, #EC4899, #D946EF);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Accordion icon transition */
+        .accordion-button svg.rotate-icon {
+            transition: transform 0.2s ease-in-out;
+        }
+        .accordion-button[aria-expanded="true"] svg.rotate-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Language Switcher -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-indigo-600">Chois</span>
+                <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI Literacy</span>
+            </div>
+            
+            <!-- Language Buttons -->
+            <div class="flex space-x-2">
+                <button id="lang-en" onclick="changeLanguage('en')" class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_en">English</button>
+                <button id="lang-zh" onclick="changeLanguage('zh')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_zh">中文</button>
+                <button id="lang-ko" onclick="changeLanguage('ko')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_ko">한국어</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Section Title -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900" data-lang-key="title">02. Operational Skills</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="subtitle">
+                Practical abilities to interact with AI through effective prompts and commands.
+            </p>
+        </section>
+
+        <!-- 1. The Art of the Prompt -->
+        <section class="bg-white shadow-lg rounded-2xl overflow-hidden mb-16">
+            <div class="md:flex">
+                <!-- Visual Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/fdf2f8/db2777?text=The+Art+of+the+Prompt" alt="Illustration of a person talking to an AI" class="w-full h-64 md:h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div class="md:w-1/2 p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-pink-600 mb-4" data-lang-key="s1_title">The Art of the Prompt</h2>
+                    <p class="text-gray-700 mb-4" data-lang-key="s1_p1">
+                        Interacting with AI, especially Generative AI, is a skill. The user's instruction is called a <strong>"prompt."</strong> The quality of the AI's output is directly proportional to the quality of your prompt.
+                    </p>
+                    <p class="text-gray-700" data-lang-key="s1_p2">
+                        A vague prompt like "write about cats" will give a generic, boring answer. A specific, detailed prompt will give a tailored, useful, and creative response. This skill is often called <strong>"prompt engineering."</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2. The RACE Framework -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s2_title">A Framework for Better Prompts: RACE</h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-2xl mx-auto" data-lang-key="s2_subtitle">
+                To get the best results, give the AI clear instructions. The <strong>RACE</strong> framework is a simple way to remember the key components of a great prompt.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- R: Role -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-xl font-bold">R</span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_r_title">Role (Who the AI should be)</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4" data-lang-key="s2_r_desc">Assign a persona or expertise to the AI. This focuses its knowledge and sets the tone.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <strong class="text-gray-800" data-lang-key="s2_example_title">Example:</strong>
+                        <p class="text-gray-700 italic" data-lang-key="s2_r_example">"Act as an expert travel guide specializing in budget travel in Japan."</p>
+                    </div>
+                </div>
+
+                <!-- A: Audience -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl font-bold">A</span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_a_title">Audience (Who the response is for)</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4" data-lang-key="s2_a_desc">Tell the AI who you are writing for. This adjusts the complexity, style, and vocabulary.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <strong class="text-gray-800" data-lang-key="s2_example_title">Example:</strong>
+                        <p class="text-gray-700 italic" data-lang-key="s2_a_example">"Explain this to a 10th-grade student," or "Write this for a team of senior engineers."</p>
+                    </div>
+                </div>
+
+                <!-- C: Context -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-xl font-bold">C</span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_c_title">Context (The background info)</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4" data-lang-key="s2_c_desc">Provide the necessary background, constraints, or information the AI needs to complete the task.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <strong class="text-gray-800" data-lang-key="s2_example_title">Example:</strong>
+                        <p class="text-gray-700 italic" data-lang-key="s2_c_example">"My team has been feeling burnt out. I have a budget of $500. I need three ideas for a team-building event."</p>
+                    </div>
+                </div>
+                
+                <!-- E: Expectation -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold">E</span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_e_title">E = Expectation (The desired output)</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4" data-lang-key="s2_e_desc">Be explicit about what you want. Define the format, length, style, and tone of the final product.</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <strong class="text-gray-800" data-lang-key="s2_example_title">Example:</strong>
+                        <p class="text-gray-700 italic" data-lang-key="s2_e_example">"Provide the answer as a bulleted list. Keep the tone enthusiastic and professional. Do not exceed 150 words."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Advanced Prompting Techniques -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="s3_title">Advanced Prompting Techniques</h2>
+            <div class="space-y-4 max-w-3xl mx-auto">
+                
+                <!-- Accordion Item 1: Meta-Prompting -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-1">
+                            <span class="flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 21v-1m0-16a1 1 0 011 1v2a1 1 0 01-2 0V5a1 1 0 011-1zm0 16a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1z"></path>
+                                </svg>
+                                <span data-lang-key="s3_term1_title">Meta-Prompting</span>
+                            </span>
+                            <svg class="w-6 h-6 shrink-0 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-1" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s3_term1_desc">
+                            This is "prompting about prompting." Instead of asking the AI for the final answer, you ask it to help you create a better prompt.
+                            <br><br><strong>Example:</strong> "I need to write an email to my boss asking for a raise. What information should I include in my prompt to you to get the best possible draft?"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2: Zero-Shot vs Few-Shot -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-2">
+                            <span class="flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                                </svg>
+                                <span data-lang-key="s3_term2_title">Zero-Shot vs. Few-Shot Prompting</span>
+                            </span>
+                            <svg class="w-6 h-6 shrink-0 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-2" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s3_term2_desc">
+                            <strong>Zero-Shot:</strong> A simple, direct question without any prior examples. (e.g., "What is the capital of France?")
+                            <br><br>
+                            <strong>Few-Shot:</strong> Providing 1–3 examples of the <em>exact</em> format you want <em>before</em> you ask your question. This is extremely effective for getting specific formatting.
+                            <br><br>
+                            <strong>Example:</strong><br>
+                            Q: Is 'apple' a fruit or vegetable?<br>
+                            A: Fruit<br>
+                            Q: Is 'spinach' a fruit or vegetable?<br>
+                            A: Vegetable<br>
+                            Q: Is 'tomato' a fruit or vegetable?<br>
+                            (The AI will now answer "Fruit" and just that.)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3: Chain-of-Thought -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-3">
+                            <span class="flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                                <span data-lang-key="s3_term3_title">Chain-of-Thought (CoT) Prompting</span>
+                            </span>
+                            <svg class="w-6 h-6 shrink-0 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-3" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s3_term3_desc">
+                            For complex problems (like math, logic, or coding), this technique dramatically improves accuracy. By simply adding the phrase "Let's think step by step," you force the AI to slow down, show its work, and make fewer errors.
+                            <br><br><strong>Example:</strong> "I have 5 apples and I give 2 to Sarah. Sarah already had 3 apples. How many apples does Sarah have now? Let's think step by step."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 4: Negative Prompting -->
+                <div class="bg-white shadow-md rounded-lg">
+                    <h2>
+                        <button type="button" class="accordion-button flex items-center justify-between w-full p-6 text-left font-semibold text-xl text-gray-900" aria-expanded="false" data-accordion-target="#accordion-body-4">
+                            <span class="flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                                </svg>
+                                <span data-lang-key="s3_term4_title">Negative Prompting</span>
+                            </span>
+                            <svg class="w-6 h-6 shrink-0 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-body-4" class="hidden p-6 border-t border-gray-200">
+                        <p class="text-gray-700" data-lang-key="s3_term4_desc">
+                            Telling the AI what <em>not</em> to do is as important as telling it what to do. This helps you avoid unwanted content, styles, or words.
+                            <br><br><strong>Example:</strong> "Write a description of a friendly robot. Do not use the word 'cyber' or 'futuristic'. Avoid technical jargon."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Beyond Text: Other AI Interactions -->
+        <section class="bg-white shadow-lg rounded-2xl p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="s4_title">Beyond Text: Other AI Interactions</h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto" data-lang-key="s4_subtitle">
+                Operational skills also apply to AI models that create images, analyze data, or even control robots.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Image Generation -->
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3" data-lang-key="s4_img_title">1. Image Generation (GenAI)</h3>
+                    <p class="text-gray-700 mb-4" data-lang-key="s4_img_desc">Image prompts combine several elements to build a scene. Good prompts often include:</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li data-lang-key="s4_img_li1"><strong>Subject:</strong> "A red fox..."</li>
+                        <li data-lang-key="s4_img_li2"><strong>Action:</strong> "...wearing a tiny astronaut helmet..."</li>
+                        <li data-lang-key="s4_img_li3"><strong>Setting:</strong> "...sitting on Mars, looking at Earth."</li>
+                        <li data-lang-key="s4_img_li4"><strong>Style:</strong> "Digital art, cinematic lighting, highly detailed."</li>
+                    </ul>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3" data-lang-key="s4_data_title">2. Data Analysis (Predictive AI)</h3>
+                    <p class="text-gray-700 mb-4" data-lang-key="s4_data_desc">When interacting with data tools, you must be precise. Good prompts include:</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li data-lang-key="s4_data_li1"><strong>Data Source:</strong> "Using the 'sales_data.csv' file..."</li>
+                        <li data-lang-key="s4_data_li2"><strong>Specific Columns:</strong> "...compare the 'Sales' column and the 'Region' column."</li>
+                        <li data-lang-key="s4_data_li3"><strong>Desired Output:</strong> "Create a bar chart showing total sales per region."</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5. Do's and Don'ts -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="s5_title">Quick Tips: Do's and Don'ts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Do's -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500">
+                    <h3 class="flex items-center text-2xl font-bold text-green-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span data-lang-key="s5_dos_title">DO...</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s5_dos_li1"><strong>Be specific and clear.</strong> More detail is almost always better.</li>
+                        <li data-lang-key="s5_dos_li2"><strong>Iterate and refine.</strong> Your first prompt is rarely your best. Treat it as a conversation.</li>
+                        <li data-lang-key="s5_dos_li3"><strong>Use constraints.</strong> Define word count, format (table, list, paragraph), and tone.</li>
+                        <li data-lang-key="s5_dos_li4"><strong>Politely correct the AI.</strong> If it makes a mistake, tell it. "That's not what I meant. Please focus on..."</li>
+                    </ul>
+                </div>
+                <!-- Don'ts -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="flex items-center text-2xl font-bold text-red-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span data-lang-key="s5_donts_title">DON'T...</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s5_donts_li1"><strong>Use vague language.</strong> Avoid words like "make it better" or "a normal summary."</li>
+                        <li data-lang-key="s5_donts_li2"><strong>Ask multiple unrelated questions</strong> in a single prompt.</li>
+                        <li data-lang-key="s5_donts_li3"><strong>Trust the output blindly.</strong> Always verify facts, figures, and code.</li>
+                        <li data-lang-key="s5_donts_li4"><strong>Forget context.</strong> Don't assume the AI knows what you're talking about from a previous chat.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chois AI 윤리 및 문해력 교육</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            en: {
+                nav_title: 'AI Literacy',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '02. Operational Skills',
+                subtitle: 'Practical abilities to interact with AI through effective prompts and commands.',
+                s1_title: 'The Art of the Prompt',
+                s1_p1: 'Interacting with AI, especially Generative AI, is a skill. The user\'s instruction is called a **"prompt."** The quality of the AI\'s output is directly proportional to the quality of your prompt.',
+                s1_p2: 'A vague prompt like "write about cats" will give a generic, boring answer. A specific, detailed prompt will give a tailored, useful, and creative response. This skill is often called **"prompt engineering."**',
+                s2_title: 'A Framework for Better Prompts: RACE',
+                s2_subtitle: 'To get the best results, give the AI clear instructions. The **RACE** framework is a simple way to remember the key components of a great prompt.',
+                s2_r_title: 'Role (Who the AI should be)',
+                s2_r_desc: 'Assign a persona or expertise to the AI. This focuses its knowledge and sets the tone.',
+                s2_example_title: 'Example:',
+                s2_r_example: '"Act as an expert travel guide specializing in budget travel in Japan."',
+                s2_a_title: 'Audience (Who the response is for)',
+                s2_a_desc: 'Tell the AI who you are writing for. This adjusts the complexity, style, and vocabulary.',
+                s2_a_example: '"Explain this to a 10th-grade student," or "Write this for a team of senior engineers."',
+                s2_c_title: 'Context (The background info)',
+                s2_c_desc: 'Provide the necessary background, constraints, or information the AI needs to complete the task.',
+                s2_c_example: '"My team has been feeling burnt out. I have a budget of $500. I need three ideas for a team-building event."',
+                s2_e_title: 'E = Expectation (The desired output)',
+                s2_e_desc: 'Be explicit about what you want. Define the format, length, style, and tone of the final product.',
+                s2_e_example: '"Provide the answer as a bulleted list. Keep the tone enthusiastic and professional. Do not exceed 150 words."',
+                s3_title: 'Advanced Prompting Techniques',
+                s3_term1_title: 'Meta-Prompting',
+                s3_term1_desc: 'This is "prompting about prompting." Instead of asking the AI for the final answer, you ask it to help you create a better prompt.<br><br><strong>Example:</strong> "I need to write an email to my boss asking for a raise. What information should I include in my prompt to you to get the best possible draft?"',
+                s3_term2_title: 'Zero-Shot vs. Few-Shot Prompting',
+                s3_term2_desc: '<strong>Zero-Shot:</strong> A simple, direct question without any prior examples. (e.g., "What is the capital of France?")<br><br><strong>Few-Shot:</strong> Providing 1-3 examples of the <em>exact</em> format you want <em>before</em> you ask your question. This is extremely effective for getting specific formatting.<br><br><strong>Example:</strong><br>Q: Is \'apple\' a fruit or vegetable?<br>A: Fruit<br>Q: Is \'spinach\' a fruit or vegetable?<br>A: Vegetable<br>Q: Is \'tomato\' a fruit or vegetable?<br>(The AI will now answer "Fruit" and just that.)',
+                s3_term3_title: 'Chain-of-Thought (CoT) Prompting',
+                s3_term3_desc: 'For complex problems (like math, logic, or coding), this technique dramatically improves accuracy. By simply adding the phrase "Let\'s think step by step," you force the AI to slow down, show its work, and make fewer errors.<br><br><strong>Example:</strong> "I have 5 apples and I give 2 to Sarah. Sarah already had 3 apples. How many apples does Sarah have now? Let\'s think step by step."',
+                s3_term4_title: 'Negative Prompting',
+                s3_term4_desc: 'Telling the AI what <em>not</em> to do is as important as telling it what to do. This helps you avoid unwanted content, styles, or words.<br><br><strong>Example:</strong> "Write a description of a friendly robot. Do not use the word \'cyber\' or \'futuristic\'. Avoid technical jargon."',
+                s4_title: 'Beyond Text: Other AI Interactions',
+                s4_subtitle: 'Operational skills also apply to AI models that create images, analyze data, or even control robots.',
+                s4_img_title: '1. Image Generation (GenAI)',
+                s4_img_desc: 'Image prompts combine several elements to build a scene. Good prompts often include:',
+                s4_img_li1: '<strong>Subject:</strong> "A red fox..."',
+                s4_img_li2: '<strong>Action:</strong> "...wearing a tiny astronaut helmet..."',
+                s4_img_li3: '<strong>Setting:</strong> "...sitting on Mars, looking at Earth."',
+                s4_img_li4: '<strong>Style:</strong> "Digital art, cinematic lighting, highly detailed."',
+                s4_data_title: '2. Data Analysis (Predictive AI)',
+                s4_data_desc: 'When interacting with data tools, you must be precise. Good prompts include:',
+                s4_data_li1: '<strong>Data Source:</strong> "Using the \'sales_data.csv\' file..."',
+                s4_data_li2: '<strong>Specific Columns:</strong> "...compare the \'Sales\' column and the \'Region\' column."',
+                s4_data_li3: '<strong>Desired Output:</strong> "Create a bar chart showing total sales per region."',
+                s5_title: 'Quick Tips: Do\'s and Don\'ts',
+                s5_dos_title: 'DO...',
+                s5_dos_li1: '<strong>Be specific and clear.</strong> More detail is almost always better.',
+                s5_dos_li2: '<strong>Iterate and refine.</strong> Your first prompt is rarely your best. Treat it as a conversation.',
+                s5_dos_li3: '<strong>Use constraints.</strong> Define word count, format (table, list, paragraph), and tone.',
+                s5_dos_li4: '<strong>Politely correct the AI.</strong> If it makes a mistake, tell it. "That\'s not what I meant. Please focus on..."',
+                s5_donts_title: 'DON\'T...',
+                s5_donts_li1: '<strong>Use vague language.</strong> Avoid words like "make it better" or "a normal summary."',
+                s5_donts_li2: '<strong>Ask multiple unrelated questions</strong> in a single prompt.',
+                s5_donts_li3: '<strong>Trust the output blindly.</strong> Always verify facts, figures, and code.',
+                s5_donts_li4: '<strong>Forget context.</strong> Don\'t assume the AI knows what you\'re talking about from a previous chat.'
+            },
+            zh: {
+                nav_title: 'AI素养',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '02. 操作技能',
+                subtitle: '通过有效的提示和命令与AI互动的实践能力。',
+                s1_title: '提示的艺术',
+                s1_p1: '与AI（尤其是生成式AI）互动是一种技能。用户的指令被称为<strong>“提示（prompt）”</strong>。AI输出的质量与您提示的质量成正比。',
+                s1_p2: '一个模糊的提示，如“写关于猫的文章”，只会得到一个泛泛而无聊的答案。一个具体、详细的提示将得到一个量身定制的、有用的、富有创意的回应。这种技能通常被称为<strong>“提示工程”</strong>。',
+                s2_title: '更好的提示框架：RACE',
+                s2_subtitle: '为了获得最佳结果，请给AI明确的指示。<strong>RACE</strong> 框架是记住一个出色提示关键组成部分的简单方法。',
+                s2_r_title: '角色 (AI应该扮演谁)',
+                s2_r_desc: '为AI分配一个角色或专业知识。这可以集中其知识并设定基调。',
+                s2_example_title: '示例：',
+                s2_r_example: '“扮演一名专门从事日本廉价旅行的专家导游。”',
+                s2_a_title: '受众 (回应是给谁看的)',
+                s2_a_desc: '告诉AI你是在为谁写作。这会调整内容的复杂性、风格和词汇。',
+                s2_a_example: '“向一个10年级的学生解释这个，”或“为一组高级工程师写这个。”',
+                s2_c_title: '背景 (背景信息)',
+                s2_c_desc: '提供AI完成任务所需的必要背景、约束或信息。',
+                s2_c_example: '“我的团队最近感到精疲力竭。我有500美元的预算。我需要三个团队建设活动的想法。”',
+                s2_e_title: '预期 (期望的输出)',
+                s2_e_desc: '明确说明你想要什么。定义最终产品的格式、长度、风格和基调。',
+                s2_e_example: '“以项目符号列表的形式提供答案。保持热情和专业的基调。不超过150字。”',
+                s3_title: '高级提示技巧',
+                s3_term1_title: '元提示 (Meta-Prompting)',
+                s3_term1_desc: '这是“关于提示的提示”。你不是向AI索要最终答案，而是要求它帮助你创建一个更好的提示。<br><br><strong>示例：</strong>“我需要给老板写一封要求加薪的电子邮件。我应该在给你的提示中包含哪些信息，才能得到最好的草稿？”',
+                s3_term2_title: '零样本 vs. 少样本提示',
+                s3_term2_desc: '<strong>零样本（Zero-Shot）：</strong>一个简单的、没有任何先前示例的直接问题。（例如，“法国的首都是哪里？”）<br><br><strong>少样本（Few-Shot）：</strong>在提问之前，提供1-3个你想要的精确格式示例。这对于获得特定格式非常有效。<br><br><strong>示例：</strong><br>问：‘苹果’是水果还是蔬菜？<br>答：水果<br>问：‘菠菜’是水果还是蔬菜？<br>答：蔬菜<br>问：‘西红柿’是水果还是蔬菜？<br>（AI现在将只回答“水果”。）',
+                s3_term3_title: '思维链 (CoT) 提示',
+                s3_term3_desc: '对于复杂问题（如数学、逻辑或编码），此技术可显著提高准确性。只需添加短语“让我们一步一步地思考”，你就能迫使AI放慢速度，展示其思考过程，并减少错误。<br><br><strong>示例：</strong>“我有5个苹果，我给了Sarah 2个。Sarah已经有3个苹果。Sarah现在有多少个苹果？让我们一步一步地思考。”',
+                s3_term4_title: '负面提示',
+                s3_term4_desc: '告诉AI不要做什么和告诉它要做什么同样重要。这有助于你避免不必要的内容、风格或词语。<br><br><strong>示例：</strong>“写一个友好机器人的描述。不要使用‘网络’或‘未来主义’这两个词。避免使用技术术语。”',
+                s4_title: '超越文本：其他AI互动',
+                s4_subtitle: '操作技能也适用于创建图像、分析数据甚至控制机器人的AI模型。',
+                s4_img_title: '1. 图像生成 (GenAI)',
+                s4_img_desc: '图像提示结合了几个元素来构建一个场景。好的提示通常包括：',
+                s4_img_li1: '<strong>主题：</strong>“一只红狐狸……”',
+                s4_img_li2: '<strong>动作：</strong>“……戴着一个小小的宇航员头盔……”',
+                s4_img_li3: '<strong>环境：</strong>“……坐在火星上，看着地球。”',
+                s4_img_li4: '<strong>风格：</strong>“数字艺术，电影般的灯光，高度详细。”',
+                s4_data_title: '2. 数据分析 (预测型AI)',
+                s4_data_desc: '与数据工具交互时，必须精确。好的提示包括：',
+                s4_data_li1: '<strong>数据源：</strong>“使用 ‘sales_data.csv’ 文件……”',
+                s4_data_li2: '<strong>特定列：</strong>“……比较 ‘Sales’ 列和 ‘Region’ 列。”',
+                s4_data_li3: '<strong>期望的输出：</strong>“创建一个显示每个地区总销售额的条形图。”',
+                s5_title: '快速提示：该做和不该做',
+                s5_dos_title: '该做...',
+                s5_dos_li1: '<strong>具体和清晰。</strong>更多细节几乎总是更好。',
+                s5_dos_li2: '<strong>迭代和改进。</strong>你的第一个提示很少是最好的，把它当作一次对话。',
+                s5_dos_li3: '<strong>使用约束。</strong>定义字数、格式（表格、列表、段落）和基调。',
+                s5_dos_li4: '<strong>礼貌地纠正AI。</strong>如果它犯了错，告诉它。“我不是那个意思。请专注于……”',
+                s5_donts_title: '不该做...',
+                s5_donts_li1: '<strong>使用模糊的语言。</strong>避免使用“让它更好”或“一个正常的摘要”之类的词。',
+                s5_donts_li2: '<strong>在单个提示中</strong>询问多个不相关的问题。',
+                s5_donts_li3: '<strong>盲目相信输出。</strong>始终核实事实、数字和代码。',
+                s5_donts_li4: '<strong>忘记上下文。</strong>不要假设AI从上一次聊天中知道你在说什么。'
+            },
+            ko: {
+                nav_title: 'AI 리터러시',
+                lang_en: 'English',
+                lang_zh: '中文',
+                lang_ko: '한국어',
+                title: '02. 운영 기술',
+                subtitle: '효과적인 프롬프트와 명령을 통해 AI와 상호 작용하는 실용적인 능력.',
+                s1_title: '프롬프트의 기술',
+                s1_p1: 'AI, 특히 생성형 AI와의 상호작용은 기술입니다. 사용자의 지시를 <strong>“프롬프트(prompt)”</strong>라고 합니다. AI의 출력 품질은 프롬프트의 품질에 정비례합니다.',
+                s1_p2: '“고양이에 대해 써줘”와 같은 모호한 프롬프트는 일반적이고 지루한 답변을 줍니다. 구체적이고 상세한 프롬프트는 맞춤형의 유용하고 창의적인 응답을 이끌어냅니다. 이 기술을 종종 <strong>“프롬프트 엔지니어링”</strong>이라고 부릅니다.',
+                s2_title: '더 나은 프롬프트를 위한 프레임워크: RACE',
+                s2_subtitle: '최상의 결과를 얻으려면 AI에게 명확한 지침을 제공해야 합니다. <strong>RACE</strong> 프레임워크는 훌륭한 프롬프트의 핵심 구성 요소를 기억하는 간단한 방법입니다.',
+                s2_r_title: 'Role (AI의 역할)',
+                s2_r_desc: 'AI에게 페르소나나 전문 지식을 할당합니다. 이는 AI의 지식을 집중시키고 어조를 설정합니다.',
+                s2_example_title: '예시:',
+                s2_r_example: '“일본 저가 여행을 전문으로 하는 전문가 여행 가이드 역할을 맡아줘.”',
+                s2_a_title: 'Audience (응답 대상)',
+                s2_a_desc: 'AI에게 누구를 위해 글을 쓰는지 알려줍니다. 이는 복잡성, 스타일, 어휘를 조정합니다.',
+                s2_a_example: '“이것을 10학년 학생에게 설명해줘” 또는 “시니어 엔지니어 팀을 위해 이것을 작성해줘.”',
+                s2_c_title: 'Context (배경 정보)',
+                s2_c_desc: 'AI가 작업을 완료하는 데 필요한 배경, 제약 조건 또는 정보를 제공합니다.',
+                s2_c_example: '“우리 팀이 최근 번아웃을 느끼고 있어. 예산은 500달러야. 팀 빌딩 이벤트를 위한 아이디어 3가지가 필요해.”',
+                s2_e_title: 'Expectation (기대하는 결과물)',
+                s2_e_desc: '원하는 것을 명시적으로 밝힙니다. 최종 결과물의 형식, 길이, 스타일, 어조를 정의합니다.',
+                s2_e_example: '“답변을 글머리 기호 목록으로 제공해줘. 열정적이고 전문적인 어조를 유지해줘. 150단어를 초과하지 마.”',
+                s3_title: '고급 프롬프트 기법',
+                s3_term1_title: '메타 프롬프팅 (Meta-Prompting)',
+                s3_term1_desc: '이는 “프롬프트에 대해 프롬프트하기”입니다. AI에게 최종 답변을 요청하는 대신, 더 나은 프롬프트를 만들도록 AI의 도움을 요청하는 것입니다.<br><br><strong>예시:</strong> “상사에게 급여 인상을 요청하는 이메일을 써야 해. 최상의 초안을 얻기 위해 너에게 보낼 프롬프트에 어떤 정보를 포함해야 할까?”',
+                s3_term2_title: '제로샷 vs. 퓨샷 프롬프팅',
+                s3_term2_desc: '<strong>제로샷(Zero-Shot):</strong> 사전 예시 없이 간단하고 직접적인 질문을 하는 것. (예: “프랑스의 수도는 어디야?”)<br><br><strong>퓨샷(Few-Shot):</strong> 질문을 하기 전에 원하는 정확한 형식의 예시를 1~3개 제공하는 것. 이는 특정 서식을 얻는 데 매우 효과적입니다.<br><br><strong>예시:</strong><br>Q: ‘사과’는 과일이야, 채소야?<br>A: 과일<br>Q: ‘시금치’는 과일이야, 채소야?<br>A: 채소<br>Q: ‘토마토’는 과일이야, 채소야?<br>(AI는 이제 “과일”이라고만 대답할 것입니다.)',
+                s3_term3_title: '사고의 연쇄 (CoT) 프롬프팅',
+                s3_term3_desc: '복잡한 문제(수학, 논리, 코딩 등)의 경우, 이 기술은 정확도를 크게 향상시킵니다. “단계별로 생각해보자”라는 문구를 추가함으로써 AI가 속도를 늦추고, 작업 과정을 보여주며, 오류를 줄이도록 할 수 있습니다.<br><br><strong>예시:</strong> “나는 사과 5개가 있고 사과 2개를 사라에게 줬어. 사라는 이미 사과 3개를 가지고 있었어. 사라는 지금 사과를 몇 개 가지고 있을까? 단계별로 생각해보자.”',
+                s3_term4_title: '부정 프롬프팅 (Negative Prompting)',
+                s3_term4_desc: 'AI에게 무엇을 하지 말아야 하는지 말하는 것은 무엇을 해야 하는지 말하는 것만큼 중요합니다. 이는 원치 않는 콘텐츠, 스타일 또는 단어를 피하는 데 도움이 됩니다.<br><br><strong>예시:</strong> “친절한 로봇에 대해 묘사해줘. ‘사이버’나 ‘미래형’이라는 단어는 사용하지 마. 기술 용어는 피해줘.”',
+                s4_title: '텍스트를 넘어: 다른 AI와의 상호작용',
+                s4_subtitle: '운영 기술은 이미지를 만들거나, 데이터를 분석하거나, 로봇을 제어하는 AI 모델에도 적용됩니다.',
+                s4_img_title: '1. 이미지 생성 (GenAI)',
+                s4_img_desc: '이미지 프롬프트는 여러 요소를 결합하여 장면을 만듭니다. 좋은 프롬프트는 종종 다음을 포함합니다:',
+                s4_img_li1: '<strong>주제:</strong> “빨간 여우 한 마리가…”',
+                s4_img_li2: '<strong>행동:</strong> “…작은 우주비행사 헬멧을 쓰고…”',
+                s4_img_li3: '<strong>배경:</strong> “…화성에 앉아 지구를 바라보고 있다.”',
+                s4_img_li4: '<strong>스타일:</strong> “디지털 아트, 시네마틱 조명, 고도로 상세하게.”',
+                s4_data_title: '2. 데이터 분석 (예측 AI)',
+                s4_data_desc: '데이터 도구와 상호 작용할 때는 정밀해야 합니다. 좋은 프롬프트는 다음을 포함합니다:',
+                s4_data_li1: '<strong>데이터 소스:</strong> “‘sales_data.csv’ 파일을 사용하여…”',
+                s4_data_li2: '<strong>특정 열:</strong> “…‘Sales’ 열과 ‘Region’ 열을 비교해줘.”',
+                s4_data_li3: '<strong>원하는 결과물:</strong> “지역별 총 매출을 보여주는 막대 차트를 만들어줘.”',
+                s5_title: '빠른 팁: 해야 할 것과 하지 말아야 할 것',
+                s5_dos_title: '해야 할 것...',
+                s5_dos_li1: '<strong>구체적이고 명확하게 말하기.</strong> 더 많은 세부 사항이 거의 항상 더 좋습니다.',
+                s5_dos_li2: '<strong>반복하고 다듬기.</strong> 첫 번째 프롬프트가 최선인 경우는 드뭅니다. 대화처럼 다루세요.',
+                s5_dos_li3: '<strong>제약 조건 사용하기.</strong> 단어 수, 형식(표, 목록, 단락), 어조를 정의하세요.',
+                s5_dos_li4: '<strong>정중하게 AI 수정하기.</strong> AI가 실수하면 알려주세요. “내 말은 그게 아니었어. …에 집중해줘.”',
+                s5_donts_title: '하지 말아야 할 것...',
+                s5_donts_li1: '<strong>모호한 언어 사용하기.</strong> “더 좋게 만들어줘”나 “일반적인 요약” 같은 말을 피하세요.',
+                s5_donts_li2: '<strong>하나의 프롬프트에서</strong> 관련 없는 여러 질문하기.',
+                s5_donts_li3: '<strong>결과물을 맹목적으로 신뢰하기.</strong> 항상 사실, 수치, 코드를 확인하세요.',
+                s5_donts_li4: '<strong>맥락 잊어버리기.</strong> AI가 이전 대화에서 당신이 무슨 말을 하는지 알고 있다고 가정하지 마세요.'
+            }
+        };
+
+        // --- Language Switcher Logic ---
+        function changeLanguage(lang) {
+            if (!translations[lang]) return;
+
+            // Update all text elements
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update <html> lang attribute
+            document.documentElement.lang = lang;
+
+            // Update button styles
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.id === `lang-${lang}`) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+
+        // --- Accordion Logic ---
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-accordion-target');
+                const targetBody = document.querySelector(targetId);
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                targetBody.classList.toggle('hidden');
+                button.setAttribute('aria-expanded', !isExpanded);
+            });
+        });
+        
+        // Initial language is English (matches static HTML)
+    </script>
+
+</body>
+</html>

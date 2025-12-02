@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chois AI Literacy: Awareness &amp; Safety</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom gradient for the title letter */
+        .title-circle {
+            background: linear-gradient(135deg, #F97316, #EF4444);
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Language Switcher -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-indigo-600">Chois</span>
+                <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI Literacy</span>
+            </div>
+            
+            <!-- Language Buttons -->
+            <div class="flex space-x-2">
+                <button id="lang-en" onclick="changeLanguage('en')" class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_en">English</button>
+                <button id="lang-zh" onclick="changeLanguage('zh')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_zh">中文</button>
+                <button id="lang-ko" onclick="changeLanguage('ko')" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full" data-lang-key="lang_ko">한국어</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Section Title -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900" data-lang-key="title">05. Awareness &amp; Safety</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="subtitle">
+                Knowledge of data privacy, security concerns, and the ethical implications of AI.
+            </p>
+        </section>
+
+        <!-- 1. "Free" Isn't Free: Data as Fuel -->
+        <section class="bg-white shadow-lg rounded-2xl overflow-hidden mb-16">
+            <div class="md:flex">
+                <!-- Visual Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/fff7ed/ea580c?text=Your+Data+is+the+Fuel" alt="Illustration of data fueling an AI brain" class="w-full h-64 md:h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div class="md:w-1/2 p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-orange-600 mb-4" data-lang-key="s1_title">"Free" Isn't Free: Your Data is the Fuel</h2>
+                    <p class="text-gray-700 mb-4" data-lang-key="s1_p1">
+                        Most "free" AI models are not free. You pay with your data. Every prompt you enter, every question you ask, and every document you upload can be used to further train the model.
+                    </p>
+                    <p class="text-gray-700" data-lang-key="s1_p2">
+                        This is the most important rule of AI safety: <strong>Do not enter any information into an AI that you would not want posted on a public billboard.</strong> This includes personal secrets, company data, or private information about others.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2. Key Privacy & Security Risks -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s2_title">Key Privacy &amp; Security Risks</h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto" data-lang-key="s2_subtitle">
+                Using AI introduces new challenges. Here are the most critical ones to be aware of.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Data Collection -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item1_title">Your Prompts as Data</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item1_desc">Companies often store your conversations to review and improve their AI. Assume that human reviewers might read your chats. Never include passwords, social security numbers, or private medical details.</p>
+                </div>
+
+                <!-- AI-Powered Phishing -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item2_title">AI-Powered Phishing</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item2_desc">Scammers use AI to write perfectly fluent, personalized emails that are much harder to detect than old, typo-filled scam messages. They can also clone voices to impersonate family members in phone calls.</p>
+                </div>
+
+                <!-- Deepfakes -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="flex-shrink-0 w-10 h-10 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </span>
+                        <h3 class="ml-4 text-2xl font-bold text-gray-900" data-lang-key="s2_item3_title">Deepfakes &amp; Disinformation</h3>
+                    </div>
+                    <p class="text-gray-700" data-lang-key="s2_item3_desc">AI can create realistic but fake videos and audio of people saying or doing things they never did. This can be used to spread political disinformation, commit fraud, or create fake celebrity scandals.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 3. Big Ethical Questions -->
+        <section class="bg-white shadow-lg rounded-2xl p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4" data-lang-key="s3_title">Big Ethical Questions</h2>
+            <p class="text-center text-lg text-gray-600 mb-8 max-w-3xl mx-auto" data-lang-key="s3_p1">
+                AI is forcing society to ask difficult questions with no easy answers. Being aware of these debates is a key part of AI literacy.
+            </p>
+            <div class="space-y-6">
+                <!-- Copyright & Ownership -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s3_item1_title">Copyright &amp; Ownership</h3>
+                    <p class="text-gray-700" data-lang-key="s3_item1_desc">If an AI is trained on millions of copyrighted images from artists, who owns the new image it creates? Is it a new piece of art, or is it a form of theft? These questions are currently being decided in courts.</p>
+                </div>
+                <!-- Job Displacement -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s3_item2_title">Job Displacement</h3>
+                    <p class="text-gray-700" data-lang-key="s3_item2_desc">AI can now perform tasks that were once safe for humans (writing, coding, design). This will likely change many jobs, removing some while creating new ones (like "Prompt Engineer"). How do we support workers through this transition?</p>
+                </div>
+                <!-- Algorithmic Fairness -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-key="s3_item3_title">Algorithmic Fairness</h3>
+                    <p class="text-gray-700" data-lang-key="s3_item3_desc">If an AI is trained on historical data, it will learn historical biases. For example, an AI system trained on past loan applications might unfairly deny loans to people in certain neighborhoods, even if they are qualified.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. Your Digital Safety Checklist -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-10" data-lang-key="s4_title">Your Digital Safety Checklist</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- The Do's -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500">
+                    <h3 class="flex items-center text-2xl font-bold text-green-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span data-lang-key="s4_dos_title">The Do's</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s4_dos_li1"><strong>Think Before You Type:</strong> Assume a stranger will read your prompt.</li>
+                        <li data-lang-key="s4_dos_li2"><strong>Be Skeptical:</strong> Question urgent emails or calls, even if they sound real. Verify through a separate channel.</li>
+                        <li data-lang-key="s4_dos_li3"><strong>Check Privacy Settings:</strong> Many AI tools now have an option to "opt-out" of using your data for training. Use it.</li>
+                        <li data-lang-key="s4_dos_li4"><strong>Anonymize Data:</strong> If you need to analyze data, replace real names and sensitive numbers with fake placeholders first.</li>
+                    </ul>
+                </div>
+                <!-- The Don'ts -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="flex items-center text-2xl font-bold text-red-700 mb-4">
+                        <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span data-lang-key="s4_donts_title">The Don'ts</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li data-lang-key="s4_donts_li1"><strong>Don't Share Secrets:</strong> Never paste confidential company memos, internal strategies, or personal diaries.</li>
+                        <li data-lang-key="s4_donts_li2"><strong>Don't Upload Sensitive Files:</strong> Do not upload documents containing financial records, unpublished research, or private legal contracts.</li>
+                        <li data-lang-key="s4_donts_li3"><strong>Don't Trust, Verify:</strong> Don't trust an AI-generated link, legal advice, or medical diagnosis. Always check with a real expert.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chois AI 윤리 및 문해력 교육</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Translation Data ---
+        const translations = {
+            'en': {
+                'nav_title': 'AI Literacy',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '05. Awareness &amp; Safety',
+                'subtitle': 'Knowledge of data privacy, security concerns, and the ethical implications of AI.',
+                's1_title': '"Free" Isn\'t Free: Your Data is the Fuel',
+                's1_p1': 'Most "free" AI models are not free. You pay with your data. Every prompt you enter, every question you ask, and every document you upload can be used to further train the model.',
+                's1_p2': 'This is the most important rule of AI safety: <strong>Do not enter any information into an AI that you would not want posted on a public billboard.</strong> This includes personal secrets, company data, or private information about others.',
+                's2_title': 'Key Privacy &amp; Security Risks',
+                's2_subtitle': 'Using AI introduces new challenges. Here are the most critical ones to be aware of.',
+                's2_item1_title': 'Your Prompts as Data',
+                's2_item1_desc': 'Companies often store your conversations to review and improve their AI. Assume that human reviewers might read your chats. Never include passwords, social security numbers, or private medical details.',
+                's2_item2_title': 'AI-Powered Phishing',
+                's2_item2_desc': 'Scammers use AI to write perfectly fluent, personalized emails that are much harder to detect than old, typo-filled scam messages. They can also clone voices to impersonate family members in phone calls.',
+                's2_item3_title': 'Deepfakes &amp; Disinformation',
+                's2_item3_desc': 'AI can create realistic but fake videos and audio of people saying or doing things they never did. This can be used to spread political disinformation, commit fraud, or create fake celebrity scandals.',
+                's3_title': 'Big Ethical Questions',
+                's3_p1': 'AI is forcing society to ask difficult questions with no easy answers. Being aware of these debates is a key part of AI literacy.',
+                's3_item1_title': 'Copyright &amp; Ownership',
+                's3_item1_desc': 'If an AI is trained on millions of copyrighted images from artists, who owns the new image it creates? Is it a new piece of art, or is it a form of theft? These questions are currently being decided in courts.',
+                's3_item2_title': 'Job Displacement',
+                's3_item2_desc': 'AI can now perform tasks that were once safe for humans (writing, coding, design). This will likely change many jobs, removing some while creating new ones (like "Prompt Engineer"). How do we support workers through this transition?',
+                's3_item3_title': 'Algorithmic Fairness',
+                's3_item3_desc': 'If an AI is trained on historical data, it will learn historical biases. For example, an AI system trained on past loan applications might unfairly deny loans to people in certain neighborhoods, even if they are qualified.',
+                's4_title': 'Your Digital Safety Checklist',
+                's4_dos_title': 'The Do\'s',
+                's4_dos_li1': '<strong>Think Before You Type:</strong> Assume a stranger will read your prompt.',
+                's4_dos_li2': '<strong>Be Skeptical:</strong> Question urgent emails or calls, even if they sound real. Verify through a separate channel.',
+                's4_dos_li3': '<strong>Check Privacy Settings:</strong> Many AI tools now have an option to "opt-out" of using your data for training. Use it.',
+                's4_dos_li4': '<strong>Anonymize Data:</strong> If you need to analyze data, replace real names and sensitive numbers with fake placeholders first.',
+                's4_donts_title': 'The Don\'ts',
+                's4_donts_li1': '<strong>Don\'t Share Secrets:</strong> Never paste confidential company memos, internal strategies, or personal diaries.',
+                's4_donts_li2': '<strong>Don\'t Upload Sensitive Files:</strong> Do not upload documents containing financial records, unpublished research, or private legal contracts.',
+                's4_donts_li3': '<strong>Don\'t Trust, Verify:</strong> Don\'t trust an AI-generated link, legal advice, or medical diagnosis. Always check with a real expert.'
+            },
+            'zh': {
+                'nav_title': 'AI素养',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '05. 意识与安全',
+                'subtitle': '了解数据隐私、安全问题以及AI的伦理影响。',
+                's1_title': '“免费”并非真的免费：您的数据是燃料',
+                's1_p1': '大多数“免费”AI模型都不是免费的。您用您的数据付费。您输入的每一个提示、您问的每一个问题、您上传的每一份文件都可能被用来进一步训练模型。',
+                's1_p2': '这是AI安全最重要的规则：<strong>不要向AI输入任何您不想被公开发布在广告牌上的信息。</strong>这包括个人秘密、公司数据或他人的私人信息。',
+                's2_title': '关键隐私与安全风险',
+                's2_subtitle': '使用AI带来了新的挑战。以下是需要意识到的最关键的几个问题。',
+                's2_item1_title': '您的提示作为数据',
+                's2_item1_desc': '公司经常存储您的对话以审查和改进他们的AI。假设人类审查员可能会阅读您的聊天记录。切勿包含密码、社会安全号码或私人医疗详情。',
+                's2_item2_title': 'AI驱动的网络钓鱼',
+                's2_item2_desc': '诈骗者使用AI编写流利、个性化的电子邮件，这些邮件比以往充满拼写错误的诈骗信息更难被发现。他们还可以克隆声音，在电话中冒充家人。',
+                's2_item3_title': '深度伪造与虚假信息',
+                's2_item3_desc': 'AI可以创建逼真但虚假的人物视频和音频，让他们说出或做出他们从未做过的事情。这可能被用来传播政治虚假信息、实施欺诈或制造虚假的名人丑闻。',
+                's3_title': '重大的伦理问题',
+                's3_p1': 'AI正迫使社会提出一些没有简单答案的难题。了解这些辩论是AI素养的关键部分。',
+                's3_item1_title': '版权与所有权',
+                's3_item1_desc': '如果一个AI是在数百万张受版权保护的艺术家图片上训练的，那么它创造的新图片归谁所有？这是一件新的艺术品，还是一种盗窃形式？这些问题目前正在法庭上裁决。',
+                's3_item2_title': '工作岗位流失',
+                's3_item2_desc': 'AI现在可以执行曾经对人类来说很安全的任务（写作、编码、设计）。这很可能会改变许多工作，淘汰一些旧工作，同时创造新工作（如“提示工程师”）。我们如何支持工人们度过这个转型期？',
+                's3_item3_title': '算法公平性',
+                's3_item3_desc': '如果一个AI是在历史数据上训练的，它将学会历史偏见。例如，一个在过去贷款申请上训练的AI系统，可能会不公平地拒绝某些社区居民的贷款，即使他们有资格。',
+                's4_title': '您的数字安全清单',
+                's4_dos_title': '应做事项',
+                's4_dos_li1': '<strong>输入前三思：</strong> 假设一个陌生人会阅读您的提示。',
+                's4_dos_li2': '<strong>保持怀疑：</strong> 质疑紧急的电子邮件或电话，即使它们听起来很真实。通过单独的渠道进行核实。',
+                's4_dos_li3': '<strong>检查隐私设置：</strong> 许多AI工具现在都有“选择退出”使用您的数据进行训练的选项。请使用它。',
+                's4_dos_li4': '<strong>匿名化数据：</strong> 如果您需要分析数据，请先将真实姓名和敏感数字替换为虚假占位符。',
+                's4_donts_title': '禁止事项',
+                's4_donts_li1': '<strong>不要分享秘密：</strong> 切勿粘贴机密的公司备忘录、内部战略或个人日记。',
+                's4_donts_li2': '<strong>不要上传敏感文件：</strong> 不要上传包含财务记录、未发表的研究或私人法律合同的文件。',
+                's4_donts_li3': '<strong>不要轻信，要核实：</strong> 不要相信AI生成的链接、法律建议或医疗诊断。始终咨询真正的专家。'
+            },
+            'ko': {
+                'nav_title': 'AI 리터러시',
+                'lang_en': 'English',
+                'lang_zh': '中文',
+                'lang_ko': '한국어',
+                'title': '05. 인식과 안전',
+                'subtitle': '데이터 프라이버시, 보안 문제 및 AI의 윤리적 함의에 대한 지식입니다.',
+                's1_title': '"무료"는 무료가 아닙니다: 당신의 데이터가 연료입니다',
+                's1_p1': '대부분의 "무료" AI 모델은 무료가 아닙니다. 당신은 데이터로 비용을 지불합니다. 당신이 입력하는 모든 프롬프트, 질문, 업로드하는 모든 문서는 모델을 추가로 훈련시키는 데 사용될 수 있습니다.',
+                's1_p2': '이것이 AI 안전의 가장 중요한 규칙입니다: <strong>공개된 게시판에 붙이고 싶지 않은 정보는 AI에 절대 입력하지 마십시오.</strong> 여기에는 개인적인 비밀, 회사 데이터 또는 타인에 대한 사적인 정보가 포함됩니다.',
+                's2_title': '주요 개인정보 및 보안 위험',
+                's2_subtitle': 'AI 사용은 새로운 도전을 제기합니다. 다음은 인지해야 할 가장 중요한 위험들입니다.',
+                's2_item1_title': '데이터로서의 프롬프트',
+                's2_item1_desc': '기업들은 AI를 검토하고 개선하기 위해 종종 당신의 대화를 저장합니다. 인간 검토자가 당신의 채팅을 읽을 수 있다고 가정하십시오. 비밀번호, 주민등록번호 또는 개인 의료 정보를 절대 포함하지 마십시오.',
+                's2_item2_title': 'AI 기반 피싱',
+                's2_item2_desc': '사기꾼들은 AI를 사용하여 완벽하게 유창하고 개인화된 이메일을 작성하며, 이는 오래된 오타가 많은 사기 메시지보다 훨씬 탐지하기 어렵습니다. 또한 음성을 복제하여 전화 통화에서 가족 구성원을 사칭할 수도 있습니다.',
+                's2_item3_title': '딥페이크 및 허위 정보',
+                's2_item3_desc': 'AI는 사람들이 결코 하지 않은 말이나 행동을 하는 현실적이지만 가짜인 비디오와 오디오를 만들 수 있습니다. 이는 정치적 허위 정보를 퍼뜨리거나, 사기를 치거나, 가짜 연예인 스캔들을 만드는 데 사용될 수 있습니다.',
+                's3_title': '주요 윤리적 질문들',
+                's3_p1': 'AI는 사회에 쉬운 답이 없는 어려운 질문들을 던지고 있습니다. 이러한 논쟁을 인지하는 것은 AI 리터러시의 핵심 부분입니다.',
+                's3_item1_title': '저작권 및 소유권',
+                's3_item1_desc': 'AI가 수백만 개의 저작권이 있는 예술가들의 이미지로 훈련되었다면, 그것이 생성한 새로운 이미지의 소유권은 누구에게 있을까요? 그것은 새로운 예술 작품일까요, 아니면 절도 행위의 한 형태일까요? 이러한 질문들은 현재 법정에서 결정되고 있습니다.',
+                's3_item2_title': '일자리 대체',
+                's3_item2_desc': 'AI는 이제 한때 인간에게 안전했던 작업(글쓰기, 코딩, 디자인)을 수행할 수 있습니다. 이는 많은 일자리를 변화시킬 것이며, 일부는 없애고 "프롬프트 엔지니어"와 같은 새로운 일자리를 창출할 것입니다. 이 전환기 동안 우리는 근로자들을 어떻게 지원해야 할까요?',
+                's3_item3_title': '알고리즘 공정성',
+                's3_item3_desc': 'AI가 역사적 데이터로 훈련된다면, 그것은 역사적 편견을 학습할 것입니다. 예를 들어, 과거 대출 신청 데이터로 훈련된 AI 시스템은 특정 지역의 사람들이 자격이 있음에도 불구하고 불공정하게 대출을 거부할 수 있습니다.',
+                's4_title': '디지털 안전 체크리스트',
+                's4_dos_title': '해야 할 일',
+                's4_dos_li1': '<strong>입력하기 전에 생각하기:</strong> 낯선 사람이 당신의 프롬프트를 읽을 것이라고 가정하십시오.',
+                's4_dos_li2': '<strong>회의적으로 접근하기:</strong> 긴급한 이메일이나 전화가 실제처럼 들리더라도 의심하십시오. 별도의 채널을 통해 확인하십시오.',
+                's4_dos_li3': '<strong>개인정보 설정 확인:</strong> 많은 AI 도구에는 이제 훈련에 데이터 사용을 "거부"하는 옵션이 있습니다. 그것을 사용하십시오.',
+                's4_dos_li4': '<strong>데이터 익명화:</strong> 데이터를 분석해야 하는 경우, 실제 이름과 민감한 번호를 먼저 가짜 플레이스홀더로 교체하십시오.',
+                's4_donts_title': '하지 말아야 할 일',
+                's4_donts_li1': '<strong>비밀 공유 금지:</strong> 기밀 회사 메모, 내부 전략 또는 개인 일기를 절대 붙여넣지 마십시오.',
+                's4_donts_li2': '<strong>민감한 파일 업로드 금지:</strong> 재무 기록, 미발표 연구 또는 사적인 법률 계약서가 포함된 문서를 업로드하지 마십시오.',
+                's4_donts_li3': '<strong>신뢰하지 말고, 검증하기:</strong> AI가 생성한 링크, 법률 조언 또는 의료 진단을 신뢰하지 마십시오. 항상 실제 전문가와 확인하십시오.'
+            }
+        };
+
+        // --- Language Switcher Logic ---
+        function changeLanguage(lang) {
+            if (!translations[lang]) return;
+
+            // Update all text elements
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update <html> lang attribute
+            document.documentElement.lang = lang;
+
+            // Update button styles
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.id === `lang-${lang}`) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+        
+        // Initial language: HTML is already in English, so no need to call changeLanguage('en') on load.
+    </script>
+
+</body>
+</html>
