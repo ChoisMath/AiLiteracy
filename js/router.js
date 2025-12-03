@@ -211,6 +211,21 @@ class Router {
   }
 }
 
+// Initialize router when DOM is ready
+let router = null;
+
+// Wait for DOM to be fully loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initRouter);
+} else {
+  // DOM is already loaded
+  initRouter();
+}
+
+function initRouter() {
+  router = new Router();
+}
+
 // Export router instance
-export const router = new Router();
+export { router };
 export default router;

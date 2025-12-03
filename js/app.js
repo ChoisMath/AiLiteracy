@@ -189,19 +189,32 @@ class App {
   }
 }
 
-// Create global app instance
-const app = new App();
+// Initialize app when DOM is ready
+let app = null;
+
+// Wait for DOM to be fully loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  // DOM is already loaded
+  initApp();
+}
+
+function initApp() {
+  // Create global app instance
+  app = new App();
+
+  // Make app globally accessible for debugging
+  window.app = app;
+
+  // Listen for route changes to update translations
+  window.addEventListener('hashchange', () => {
+    // Small delay to ensure content is loaded
+    setTimeout(() => {
+      app.updateAllTranslations();
+    }, 100);
+  });
+}
 
 // Export app for use in other modules
 export default app;
-
-// Make app globally accessible for debugging
-window.app = app;
-
-// Listen for route changes to update translations
-window.addEventListener('hashchange', () => {
-  // Small delay to ensure content is loaded
-  setTimeout(() => {
-    app.updateAllTranslations();
-  }, 100);
-});
