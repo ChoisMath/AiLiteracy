@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 윤리 및 문해력 교육 - Chois</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Sidebar transition */
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #sidebar.hidden-mobile {
+            transform: translateX(-100%);
+        }
+
+        @media (min-width: 768px) {
+            #sidebar.hidden-mobile {
+                transform: translateX(0);
+            }
+        }
+
+        /* Accordion icon transition */
+        .accordion-button svg {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .accordion-button[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
+
+        /* Active sidebar link */
+        .sidebar-link.active {
+            background-color: #4F46E5;
+            color: white;
+        }
+
+        /* Custom gradient for module cards */
+        .title-circle {
+            background: linear-gradient(135deg, #4F46E5, #3B82F6);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header with Hamburger Menu & Language Switcher -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Left: Hamburger + Logo -->
+            <div class="flex items-center space-x-4">
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button id="hamburger-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Logo/Title -->
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-indigo-600">Chois</span>
+                    <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI 리터러시</span>
+                </div>
+            </div>
+
+            <!-- Language Buttons -->
+            <div class="flex space-x-2">
+                <button id="lang-ko" class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full hover:bg-indigo-700 transition" data-lang-key="lang_ko">한국어</button>
+                <button id="lang-en" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full hover:bg-gray-300 transition" data-lang-key="lang_en">English</button>
+                <button id="lang-zh" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full hover:bg-gray-300 transition" data-lang-key="lang_zh">中文</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Layout: Sidebar + Content -->
+    <div class="flex relative">
+
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="hidden-mobile fixed md:sticky top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white shadow-lg z-40 overflow-y-auto">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 px-2">목차</h2>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#home" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="home">
+                            <span class="font-semibold">홈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#module01" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module01">
+                            <span class="text-sm text-gray-500">Module 01</span>
+                            <div class="font-semibold" data-lang-key="module01_nav">핵심 이해</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#module02" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module02">
+                            <span class="text-sm text-gray-500">Module 02</span>
+                            <div class="font-semibold" data-lang-key="module02_nav">운영 기술</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#module03" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module03">
+                            <span class="text-sm text-gray-500">Module 03</span>
+                            <div class="font-semibold" data-lang-key="module03_nav">신중한 평가</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#module04" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module04">
+                            <span class="text-sm text-gray-500">Module 04</span>
+                            <div class="font-semibold" data-lang-key="module04_nav">실용적 통합</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#module05" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module05">
+                            <span class="text-sm text-gray-500">Module 05</span>
+                            <div class="font-semibold" data-lang-key="module05_nav">인식과 안전</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#module06" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module06">
+                            <span class="text-sm text-gray-500">Module 06</span>
+                            <div class="font-semibold" data-lang-key="module06_nav">시너지와 성장</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#module07" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module07">
+                            <span class="text-sm text-gray-500">Module 07</span>
+                            <div class="font-semibold" data-lang-key="module07_nav">사회적 영향</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Overlay for mobile sidebar -->
+        <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"></div>
+
+        <!-- Main Content Area -->
+        <main id="app-content" class="flex-1 md:ml-0 p-4 sm:p-6 lg:p-8 max-w-5xl mx-auto w-full">
+            <!-- Content will be loaded here dynamically -->
+            <div class="text-center py-20">
+                <div class="animate-pulse">
+                    <div class="h-12 bg-gray-200 rounded w-3/4 mx-auto mb-4"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Chois AI 윤리 및 문해력 교육</p>
+        </div>
+    </footer>
+
+    <!-- Load translations and app -->
+    <script type="module" src="js/translations.js"></script>
+    <script type="module" src="js/router.js"></script>
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

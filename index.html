@@ -1,179 +1,264 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 윤리 및 문해력 교육 - Chois</title>
-
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Load Google Font (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Custom Styles -->
+    <title>AI Literacy Curriculum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --card-hover: rgba(51, 65, 85, 0.9);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.3);
+            --gradient-start: #3b82f6;
+            --gradient-end: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 40%);
         }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInDown 0.8s ease-out;
         }
 
-        /* Sidebar transition */
-        #sidebar {
-            transition: transform 0.3s ease-in-out;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
         }
 
-        #sidebar.hidden-mobile {
-            transform: translateX(-100%);
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
-        @media (min-width: 768px) {
-            #sidebar.hidden-mobile {
-                transform: translateX(0);
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: var(--card-hover);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px -10px var(--accent-glow);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-number {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .card-arrow {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--accent);
+            opacity: 0.8;
+            transition: gap 0.3s ease;
+            gap: 0.5rem;
+        }
+
+        .card:hover .card-arrow {
+            opacity: 1;
+            gap: 0.8rem;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        /* Accordion icon transition */
-        .accordion-button svg {
-            transition: transform 0.2s ease-in-out;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .accordion-button[aria-expanded="true"] svg {
-            transform: rotate(180deg);
-        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
 
-        /* Active sidebar link */
-        .sidebar-link.active {
-            background-color: #4F46E5;
-            color: white;
-        }
-
-        /* Custom gradient for module cards */
-        .title-circle {
-            background: linear-gradient(135deg, #4F46E5, #3B82F6);
+            body {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-    <!-- Header with Hamburger Menu & Language Switcher -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <!-- Left: Hamburger + Logo -->
-            <div class="flex items-center space-x-4">
-                <!-- Hamburger Menu Button (Mobile) -->
-                <button id="hamburger-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none" aria-label="Toggle menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-
-                <!-- Logo/Title -->
-                <div class="flex items-center space-x-2">
-                    <span class="text-2xl font-bold text-indigo-600">Chois</span>
-                    <span class="text-xl text-gray-600 font-light" data-lang-key="nav_title">AI 리터러시</span>
-                </div>
-            </div>
-
-            <!-- Language Buttons -->
-            <div class="flex space-x-2">
-                <button id="lang-ko" class="lang-btn bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-full hover:bg-indigo-700 transition" data-lang-key="lang_ko">한국어</button>
-                <button id="lang-en" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full hover:bg-gray-300 transition" data-lang-key="lang_en">English</button>
-                <button id="lang-zh" class="lang-btn bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-full hover:bg-gray-300 transition" data-lang-key="lang_zh">中文</button>
-            </div>
-        </nav>
+<body>
+    <header>
+        <h1>AI Literacy</h1>
+        <p class="subtitle">인공지능의 이해부터 사회적 영향까지,<br>체계적인 AI 리터러시 학습 여정을 시작하세요.</p>
     </header>
 
-    <!-- Main Layout: Sidebar + Content -->
-    <div class="flex relative">
-
-        <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="hidden-mobile fixed md:sticky top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white shadow-lg z-40 overflow-y-auto">
-            <nav class="p-4">
-                <h2 class="text-lg font-bold text-gray-800 mb-4 px-2">목차</h2>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#home" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="home">
-                            <span class="font-semibold">홈</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#module01" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module01">
-                            <span class="text-sm text-gray-500">Module 01</span>
-                            <div class="font-semibold" data-lang-key="module01_nav">핵심 이해</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#module02" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module02">
-                            <span class="text-sm text-gray-500">Module 02</span>
-                            <div class="font-semibold" data-lang-key="module02_nav">운영 기술</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#module03" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module03">
-                            <span class="text-sm text-gray-500">Module 03</span>
-                            <div class="font-semibold" data-lang-key="module03_nav">신중한 평가</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#module04" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module04">
-                            <span class="text-sm text-gray-500">Module 04</span>
-                            <div class="font-semibold" data-lang-key="module04_nav">실용적 통합</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#module05" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module05">
-                            <span class="text-sm text-gray-500">Module 05</span>
-                            <div class="font-semibold" data-lang-key="module05_nav">인식과 안전</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#module06" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module06">
-                            <span class="text-sm text-gray-500">Module 06</span>
-                            <div class="font-semibold" data-lang-key="module06_nav">시너지와 성장</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#module07" class="sidebar-link block px-4 py-3 rounded-lg hover:bg-gray-100 transition" data-module="module07">
-                            <span class="text-sm text-gray-500">Module 07</span>
-                            <div class="font-semibold" data-lang-key="module07_nav">사회적 영향</div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-
-        <!-- Overlay for mobile sidebar -->
-        <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"></div>
-
-        <!-- Main Content Area -->
-        <main id="app-content" class="flex-1 md:ml-0 p-4 sm:p-6 lg:p-8 max-w-5xl mx-auto w-full">
-            <!-- Content will be loaded here dynamically -->
-            <div class="text-center py-20">
-                <div class="animate-pulse">
-                    <div class="h-12 bg-gray-200 rounded w-3/4 mx-auto mb-4"></div>
-                    <div class="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
-                </div>
+    <main class="grid">
+        <a href="01_core_understanding.html" class="card">
+            <div>
+                <div class="card-number">Module 01</div>
+                <h2 class="card-title">Core Understanding</h2>
+                <p class="card-desc">인공지능의 핵심 개념과 원리를 이해합니다.</p>
             </div>
-        </main>
+            <div class="card-arrow">Start Learning <span>→</span></div>
+        </a>
 
-    </div>
+        <a href="02_PromptEngineering.html" class="card">
+            <div>
+                <div class="card-number">Module 02</div>
+                <h2 class="card-title">Prompt Engineering</h2>
+                <p class="card-desc">효과적인 프롬프트 작성 기법을 익힙니다.</p>
+            </div>
+            <div class="card-arrow">Start Learning <span>→</span></div>
+        </a>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 mt-12 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 Chois AI 윤리 및 문해력 교육</p>
-        </div>
-    </footer>
+        <a href="03_Mindful_Evaluation.html" class="card">
+            <div>
+                <div class="card-number">Module 03</div>
+                <h2 class="card-title">Mindful Evaluation</h2>
+                <p class="card-desc">AI 결과를 비판적으로 평가하는 방법을 배웁니다.</p>
+            </div>
+            <div class="card-arrow">Start Learning <span>→</span></div>
+        </a>
 
-    <!-- Load translations and app -->
-    <script type="module" src="js/translations.js"></script>
-    <script type="module" src="js/router.js"></script>
-    <script type="module" src="js/app.js"></script>
+        <a href="04_practical_integration.html" class="card">
+            <div>
+                <div class="card-number">Module 04</div>
+                <h2 class="card-title">Practical Integration</h2>
+                <p class="card-desc">실생활과 업무에 AI를 통합하여 활용합니다.</p>
+            </div>
+            <div class="card-arrow">Start Learning <span>→</span></div>
+        </a>
 
+        <a href="05_Awareness_Safety.html" class="card">
+            <div>
+                <div class="card-number">Module 05</div>
+                <h2 class="card-title">Awareness & Safety</h2>
+                <p class="card-desc">AI 안전과 윤리적 사용에 대해 고찰합니다.</p>
+            </div>
+            <div class="card-arrow">Start Learning <span>→</span></div>
+        </a>
+
+        <a href="06_synergy_growth.html" class="card">
+            <div>
+                <div class="card-number">Module 06</div>
+                <h2 class="card-title">Synergy & Growth</h2>
+                <p class="card-desc">인간과 AI의 협력을 통한 성장을 모색합니다.</p>
+            </div>
+            <div class="card-arrow">Start Learning <span>→</span></div>
+        </a>
+
+        <a href="07_social_ompact.html" class="card">
+            <div>
+                <div class="card-number">Module 07</div>
+                <h2 class="card-title">Social Impact</h2>
+                <p class="card-desc">AI가 사회에 미치는 영향과 미래를 조망합니다.</p>
+            </div>
+            <div class="card-arrow">Start Learning <span>→</span></div>
+        </a>
+    </main>
 </body>
+
 </html>
